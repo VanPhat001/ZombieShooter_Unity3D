@@ -95,12 +95,27 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    void Zoom()
+    {
+        Camera cam = this.fpsCamera.GetComponent<Camera>();
+        if (Input.GetKey(KeyCode.F))
+        {
+            cam.fieldOfView -= 0.8f;
+        }
+        else
+        {
+            cam.fieldOfView += 0.8f;
+        }
+        cam.fieldOfView = Mathf.Clamp(cam.fieldOfView, 10, 60);
+    }
+
     private void Update()
     {
         Move();
         RotateBody();
         RotateHead();
         Jump();
+        Zoom();
         Debug.Log(onGround());
     }
 }
