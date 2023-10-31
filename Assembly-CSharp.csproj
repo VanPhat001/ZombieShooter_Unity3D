@@ -79,6 +79,7 @@
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/CameraController.cs" />
      <Compile Include="Assets/Downloads/Low Poly Guns/Scripts/GunsMenu.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark03.cs" />
+     <Compile Include="Assets/Scripts/Zombie/ZombieController.cs" />
      <Compile Include="Assets/Scripts/Player/PlayerCollision.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextInfoDebugTool.cs" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
@@ -750,8 +751,14 @@
     <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model">
         <HintPath>/Users/macos/Desktop/ZombieShooter/Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.AI.Navigation">
+        <HintPath>/Users/macos/Desktop/ZombieShooter/Library/ScriptAssemblies/Unity.AI.Navigation.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.PlasticSCM.Editor">
         <HintPath>/Users/macos/Desktop/ZombieShooter/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.AI.Navigation.Updater">
+        <HintPath>/Users/macos/Desktop/ZombieShooter/Library/ScriptAssemblies/Unity.AI.Navigation.Updater.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.State.Editor">
         <HintPath>/Users/macos/Desktop/ZombieShooter/Library/ScriptAssemblies/Unity.VisualScripting.State.Editor.dll</HintPath>
@@ -783,11 +790,17 @@
     <Reference Include="Unity.Rider.Editor">
         <HintPath>/Users/macos/Desktop/ZombieShooter/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.AI.Navigation.Editor">
+        <HintPath>/Users/macos/Desktop/ZombieShooter/Library/ScriptAssemblies/Unity.AI.Navigation.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VisualScripting.State">
         <HintPath>/Users/macos/Desktop/ZombieShooter/Library/ScriptAssemblies/Unity.VisualScripting.State.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
         <HintPath>/Users/macos/Desktop/ZombieShooter/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.AI.Navigation.Editor.ConversionSystem">
+        <HintPath>/Users/macos/Desktop/ZombieShooter/Library/ScriptAssemblies/Unity.AI.Navigation.Editor.ConversionSystem.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Flow">
         <HintPath>/Users/macos/Desktop/ZombieShooter/Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll</HintPath>

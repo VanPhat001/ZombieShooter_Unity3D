@@ -12,9 +12,10 @@ public class PlayerShooter : MonoBehaviour
 
     }
 
-    public void ShootZombie()
+    public void ShootZombie(RaycastHit hit)
     {
-
+        var zombie = hit.transform.GetComponent<ZombieController>();
+        zombie.ReceiveDamage(damage: 20);
     }
 
     void Shoot()
@@ -29,7 +30,7 @@ public class PlayerShooter : MonoBehaviour
             }
             else if (hit.transform.tag.Equals("Zombie"))
             {
-                ShootZombie();
+                ShootZombie(hit);
             }
         }
     }
@@ -46,10 +47,12 @@ public class PlayerShooter : MonoBehaviour
         {
             if (PlayerController.Instance.useGun)
             {
+                this.tick = 0;
                 Shoot();
             }
             else
             {
+                this.tick = 0;
                 ThrowGrenade();
             }
         }

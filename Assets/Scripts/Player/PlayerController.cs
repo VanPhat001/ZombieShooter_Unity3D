@@ -9,6 +9,9 @@ public class PlayerController : MonoBehaviour
     public GameObject gunWrapper;
     public GameObject grenadeWrapper;
 
+    public float currentHP { get; private set; } = 100;
+    public float maxHP { get; private set; } = 100;
+
     public float speed = 5f;
     public float speedUpRate = 1.8f;
     public bool useGun { get; private set; } = true;
@@ -21,6 +24,12 @@ public class PlayerController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         CanvasController.Instance.SetHealth(1);
         this.rigid = this.GetComponent<Rigidbody>();
+    }
+
+    public void ReceiveDamage(float damage)
+    {
+        this.currentHP = Mathf.Clamp(this.currentHP - damage, 0, maxHP);
+        CanvasController.Instance.SetHealth(percent: this.currentHP / this.maxHP);
     }
 
     void Move()
@@ -88,7 +97,7 @@ public class PlayerController : MonoBehaviour
 
     bool onGround()
     {
-        return Physics.Raycast(this.transform.position, Vector3.down, 0.5f);
+        return Physics.Raycast(this.transform.position, Vector3.down, 0.750001f);
     }
 
     void Jump()
