@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     {
         Instance = this;
         Cursor.lockState = CursorLockMode.Locked;
+        CanvasController.Instance.SetHealth(1);
         this.rigid = this.GetComponent<Rigidbody>();
     }
 
@@ -116,6 +117,5 @@ public class PlayerController : MonoBehaviour
         RotateHead();
         Jump();
         Zoom();
-        Debug.Log(onGround());
     }
 }
