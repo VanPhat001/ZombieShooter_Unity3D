@@ -1,9 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    static public PlayerController Instance { get; private set; }
+
     public GameObject fpsCamera;
     public GameObject gunWrapper;
     public GameObject grenadeWrapper;
@@ -11,9 +11,13 @@ public class PlayerController : MonoBehaviour
     public float speed = 5f;
     public float speedUpRate = 1.8f;
 
+    Rigidbody rigid;
+
     private void Start()
     {
+        Instance = this;
         Cursor.lockState = CursorLockMode.Locked;
+        this.rigid = this.GetComponent<Rigidbody>();
     }
 
     void Move()
@@ -78,10 +82,25 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    bool onGround()
+    {
+        return Physics.Raycast(this.transform.position, Vector3.down, 0.5f);
+    }
+
+    void Jump()
+    {
+        if (Input.GetKey(KeyCode.Space) && onGround())
+        {
+            this.rigid.AddForce(Vector3.up * 200);
+        }
+    }
+
     private void Update()
     {
         Move();
         RotateBody();
         RotateHead();
+        Jump();
+        Debug.Log(onGround());
     }
 }
