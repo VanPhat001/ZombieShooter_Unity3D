@@ -5,11 +5,13 @@ public class PlayerController : MonoBehaviour
     static public PlayerController Instance { get; private set; }
 
     public GameObject fpsCamera;
+    public GameObject weapons;
     public GameObject gunWrapper;
     public GameObject grenadeWrapper;
 
     public float speed = 5f;
     public float speedUpRate = 1.8f;
+    public bool useGun { get; private set; } = true;
 
     Rigidbody rigid;
 
@@ -29,20 +31,20 @@ public class PlayerController : MonoBehaviour
             speed *= this.speedUpRate;
         }
 
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
             this.transform.Translate(Vector3.forward * speed);
         }
-        else if (Input.GetKey(KeyCode.S))
+        else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
         {
             this.transform.Translate(Vector3.back * speed);
         }
 
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             this.transform.Translate(Vector3.left * speed);
         }
-        else if (Input.GetKey(KeyCode.D))
+        else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
             this.transform.Translate(Vector3.right * speed);
         }
@@ -80,6 +82,7 @@ public class PlayerController : MonoBehaviour
             {
                 this.fpsCamera.transform.rotation = Quaternion.Euler(newX, euler.y, euler.z);
             }
+            this.weapons.transform.rotation = this.fpsCamera.transform.rotation;
         }
     }
 
@@ -110,6 +113,27 @@ public class PlayerController : MonoBehaviour
         cam.fieldOfView = Mathf.Clamp(cam.fieldOfView, 10, 60);
     }
 
+    void ChangeWeapon()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            this.useGun = true;
+            this.gunWrapper.SetActive(true);
+            this.grenadeWrapper.SetActive(false);
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            this.useGun = false;
+            this.gunWrapper.SetActive(false);
+            this.grenadeWrapper.SetActive(true);
+        }
+    }
+
+    void PickWeapon()
+    {
+
+    }
+
     private void Update()
     {
         Move();
@@ -117,5 +141,7 @@ public class PlayerController : MonoBehaviour
         RotateHead();
         Jump();
         Zoom();
+        ChangeWeapon();
+        PickWeapon();
     }
 }
