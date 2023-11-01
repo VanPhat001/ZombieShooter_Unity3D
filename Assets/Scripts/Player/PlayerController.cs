@@ -8,8 +8,9 @@ public class PlayerController : MonoBehaviour
     public GameObject weapons;
     public GameObject gunWrapper;
     public GameObject grenadeWrapper;
+    public GameObject bulletImpact;
     public AudioClip fireSound;
-    
+
 
     public float currentHP { get; private set; } = 100;
     public float maxHP { get; private set; } = 100;
@@ -39,6 +40,15 @@ public class PlayerController : MonoBehaviour
     public void PlayFireSound()
     {
         this.audioSource.PlayOneShot(this.fireSound);
+    }
+
+    public void AddBulletImpact(Vector3 pos)
+    {
+        GameObject bulletImpactPS = Instantiate(this.bulletImpact, pos, this.fpsCamera.transform.rotation);
+        bulletImpactPS.transform.Rotate(0, 0, 180);
+        bulletImpactPS.GetComponent<ParticleSystem>().Play();
+
+        Destroy(bulletImpactPS, 1f);
     }
 
     void Move()

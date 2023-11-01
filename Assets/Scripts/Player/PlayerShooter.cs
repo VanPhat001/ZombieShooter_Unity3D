@@ -30,16 +30,18 @@ public class PlayerShooter : MonoBehaviour
         {
             string tag = hit.transform.tag;
             Debug.Log(tag);
-            
+
             if (tag.StartsWith("Object"))
             {
                 ShootObject();
                 PlayerController.Instance.PlayFireSound();
+                PlayerController.Instance.AddBulletImpact(hit.point);
             }
             else if (tag.Equals("Zombie"))
             {
                 ShootZombie(hit);
                 PlayerController.Instance.PlayFireSound();
+                PlayerController.Instance.AddBulletImpact(hit.point);
             }
         }
     }

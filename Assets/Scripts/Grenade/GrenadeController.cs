@@ -6,6 +6,7 @@ public class GrenadeController : MonoBehaviour
 {
     public float grenadeDamage = 40;
     public AudioClip explosionSound;
+    public GameObject grenadeExplosion;
     AudioSource audioSource;
 
     private void Start()
@@ -18,6 +19,9 @@ public class GrenadeController : MonoBehaviour
         yield return new WaitForSeconds(timeDuration);
 
         this.audioSource.PlayOneShot(this.explosionSound);
+        GameObject explosionObject = Instantiate(this.grenadeExplosion, this.transform.position, Quaternion.identity);
+        explosionObject.GetComponent<ParticleSystem>().Play();
+
         for (int i = 0; i < this.transform.childCount; i++)
         {
             Destroy(this.transform.GetChild(i).gameObject);

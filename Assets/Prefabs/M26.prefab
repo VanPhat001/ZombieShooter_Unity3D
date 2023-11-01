@@ -302,6 +302,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grenadeDamage: 40
   explosionSound: {fileID: 8300000, guid: 29dbccf0ad4614d668b2f6a2d3934192, type: 3}
+  grenadeExplosion: {fileID: 370708388672540690, guid: 3c4fe04ffc5614a33b7b5ad0e5c2d4b9, type: 3}
 --- !u!54 &7343710941593729606
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -327,7 +328,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 126
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!136 &6626647251505045124
 CapsuleCollider:
