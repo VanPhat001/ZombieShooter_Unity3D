@@ -56,7 +56,6 @@
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark01_UGUI.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/SimpleScript.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark04.cs" />
-     <Compile Include="Assets/Scripts/GhoulZombie/GhoulZombieController.cs" />
      <Compile Include="Assets/Scripts/Player/PlayerController.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/ChatController.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/ObjectSpin.cs" />
@@ -81,6 +80,7 @@
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/CameraController.cs" />
      <Compile Include="Assets/Downloads/Low Poly Guns/Scripts/GunsMenu.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark03.cs" />
+     <Compile Include="Assets/Scripts/Grenade/GrenadeCotroller.cs" />
      <Compile Include="Assets/Scripts/Zombie/ZombieController.cs" />
      <Compile Include="Assets/Scripts/Player/PlayerCollision.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextInfoDebugTool.cs" />

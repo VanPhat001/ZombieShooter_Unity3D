@@ -1,8 +1,10 @@
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class ZombieController : MonoBehaviour
 {
+    public Slider healthBar;
     public GameObject goal;
     public float currentHP { get; private set; } = 100;
     public float maxHP { get; private set; } = 100;
@@ -18,12 +20,19 @@ public class ZombieController : MonoBehaviour
         this.agent = this.GetComponent<NavMeshAgent>();
         this.animator = this.GetComponent<Animator>();
         this.audioSource = this.GetComponent<AudioSource>();
+        UpdateHealthBar();
         SetWalkAction(true);
     }
 
     public void ReceiveDamage(float damage)
     {
         this.currentHP = Mathf.Clamp(this.currentHP - damage, 0, this.maxHP);
+        UpdateHealthBar();
+    }
+
+    public void UpdateHealthBar()
+    {
+        this.healthBar.value = this.currentHP / this.maxHP;
     }
 
     void SetWalkAction(bool value)

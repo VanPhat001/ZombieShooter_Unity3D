@@ -22,16 +22,6 @@ public class PlayerShooter : MonoBehaviour
         }
     }
 
-    public void ShootGhoulZombie(RaycastHit hit)
-    {
-        var zombie = hit.transform.GetComponent<GhoulZombieController>();
-        zombie.ReceiveDamage(damage: 20);
-        if (zombie.currentHP <= 0)
-        {
-            CanvasController.Instance.AddScore(12);
-        }
-    }
-
     void Shoot()
     {
         GameObject cam = PlayerController.Instance.fpsCamera;
@@ -49,11 +39,6 @@ public class PlayerShooter : MonoBehaviour
             else if (tag.Equals("Zombie"))
             {
                 ShootZombie(hit);
-                PlayerController.Instance.PlayFireSound();
-            }
-            else if (tag.Equals("GhoulZombie"))
-            {
-                ShootGhoulZombie(hit);
                 PlayerController.Instance.PlayFireSound();
             }
         }

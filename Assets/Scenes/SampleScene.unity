@@ -848,6 +848,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zombie: {fileID: 1033442420177042242, guid: b5ce4c34861d74444bd1606fb65589fc, type: 3}
+  ghoulZombie: {fileID: 4269697705758030587, guid: 5e7b93181101a49fc9d60b903f20abd7, type: 3}
 --- !u!4 &598168136
 Transform:
   m_ObjectHideFlags: 0
