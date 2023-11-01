@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerShooter : MonoBehaviour
 {
-    float timeBetweenShoots = 0.2f;
+    float timeBetweenShoots = 0.1f;
     float tick = 0;
 
     public void ShootObject()
@@ -16,6 +16,10 @@ public class PlayerShooter : MonoBehaviour
     {
         var zombie = hit.transform.GetComponent<ZombieController>();
         zombie.ReceiveDamage(damage: 20);
+        if (zombie.currentHP <= 0)
+        {
+            CanvasController.Instance.AddScore(10);
+        }
     }
 
     void Shoot()
@@ -24,20 +28,23 @@ public class PlayerShooter : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit))
         {
-            if (hit.transform.tag.StartsWith("Object"))
+            string tag = hit.transform.tag;
+            if (tag.StartsWith("Object"))
             {
                 ShootObject();
+                PlayerController.Instance.PlayFireSound();
             }
-            else if (hit.transform.tag.Equals("Zombie"))
+            else if (tag.Equals("Zombie"))
             {
                 ShootZombie(hit);
+                PlayerController.Instance.PlayFireSound();
             }
         }
     }
 
     void ThrowGrenade()
     {
-        
+
     }
 
     private void Update()

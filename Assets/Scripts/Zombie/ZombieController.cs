@@ -7,21 +7,23 @@ public class ZombieController : MonoBehaviour
     public float currentHP { get; private set; } = 100;
     public float maxHP { get; private set; } = 100;
     public bool isDead { get; private set; } = false;
+    public AudioClip deathSound;
 
     NavMeshAgent agent;
     Animator animator;
+    AudioSource audioSource;
 
     private void Start()
     {
         this.agent = this.GetComponent<NavMeshAgent>();
         this.animator = this.GetComponent<Animator>();
+        this.audioSource = this.GetComponent<AudioSource>();
         SetWalkAction(true);
     }
 
     public void ReceiveDamage(float damage)
     {
         this.currentHP = Mathf.Clamp(this.currentHP - damage, 0, this.maxHP);
-        Debug.Log(this.currentHP);
     }
 
     void SetWalkAction(bool value)
@@ -59,10 +61,13 @@ public class ZombieController : MonoBehaviour
         {
             this.isDead = true;
             this.goal = this.gameObject;
+            Destroy(this.GetComponent<CapsuleCollider>());
 
             SetWalkAction(false);
             SetAttackAction(false);
             SetDeathAction(true);
+
+            this.audioSource.PlayOneShot(this.deathSound);
 
             Destroy(this.gameObject, 1.5f);
             return;

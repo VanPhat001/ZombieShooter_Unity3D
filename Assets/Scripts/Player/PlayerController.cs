@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
     public GameObject weapons;
     public GameObject gunWrapper;
     public GameObject grenadeWrapper;
+    public AudioClip fireSound;
+    
 
     public float currentHP { get; private set; } = 100;
     public float maxHP { get; private set; } = 100;
@@ -17,6 +19,7 @@ public class PlayerController : MonoBehaviour
     public bool useGun { get; private set; } = true;
 
     Rigidbody rigid;
+    AudioSource audioSource;
 
     private void Start()
     {
@@ -24,12 +27,18 @@ public class PlayerController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         CanvasController.Instance.SetHealth(1);
         this.rigid = this.GetComponent<Rigidbody>();
+        this.audioSource = this.GetComponent<AudioSource>();
     }
 
     public void ReceiveDamage(float damage)
     {
         this.currentHP = Mathf.Clamp(this.currentHP - damage, 0, maxHP);
         CanvasController.Instance.SetHealth(percent: this.currentHP / this.maxHP);
+    }
+
+    public void PlayFireSound()
+    {
+        this.audioSource.PlayOneShot(this.fireSound);
     }
 
     void Move()
