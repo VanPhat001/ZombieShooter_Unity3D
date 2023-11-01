@@ -11,6 +11,7 @@ public class CanvasController : MonoBehaviour
 
     public TMP_Text timeText;
     public TMP_Text scoreText;
+    public TMP_Text bulletRemainText;
     public Slider healthBar;
     public GameObject sight;
 
@@ -34,6 +35,11 @@ public class CanvasController : MonoBehaviour
     {
         this.score += value;
         this.scoreText.text = "Score: " + this.score;
+    }
+
+    public void SetBulletRemainText(string text)
+    {
+        this.bulletRemainText.text = text;
     }
 
     public void SetVisibleSight(bool visible)

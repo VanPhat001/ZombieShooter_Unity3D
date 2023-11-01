@@ -1,3 +1,4 @@
+using UnityEditor;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -9,7 +10,6 @@ public class PlayerController : MonoBehaviour
     public GameObject gunWrapper;
     public GameObject grenadeWrapper;
     public GameObject bulletImpact;
-    public AudioClip fireSound;
 
 
     public float currentHP { get; private set; } = 100;
@@ -18,9 +18,38 @@ public class PlayerController : MonoBehaviour
     public float speed = 5f;
     public float speedUpRate = 1.8f;
     public bool useGun { get; private set; } = true;
+    public GunController gunController { get; private set; }
 
     Rigidbody rigid;
     AudioSource audioSource;
+
+    GameObject detectGun = null;
+    public GameObject DetectGun
+    {
+        get => detectGun;
+        set
+        {
+            if (detectGun == value)
+            {
+                return;
+            }
+
+            if (detectGun != null)
+            {
+                Renderer gunRenderer = detectGun.GetComponent<Renderer>();
+                Color customColor = new Color(0, 0, 0, 0);
+                gunRenderer.material.SetColor("_Color", customColor);
+            }
+
+            detectGun = value;
+            if (detectGun != null)
+            {
+                Renderer gunRenderer = detectGun.GetComponent<Renderer>();
+                Color customColor = new Color(0, 0, 1, 1);
+                gunRenderer.material.SetColor("_Color", customColor);
+            }
+        }
+    }
 
     private void Start()
     {
@@ -29,6 +58,16 @@ public class PlayerController : MonoBehaviour
         CanvasController.Instance.SetHealth(1);
         this.rigid = this.GetComponent<Rigidbody>();
         this.audioSource = this.GetComponent<AudioSource>();
+
+        GameObject gun = this.gunWrapper.transform.GetChild(0).gameObject;
+        this.gunController = gun.GetComponent<GunController>();
+
+        UpdateBulletOnScreen();
+    }
+
+    public void UpdateBulletOnScreen()
+    {
+        CanvasController.Instance.bulletRemainText.text = $"{this.gunController.currentBulletsInMagazine}\\{this.gunController.currentTotalBullets}";
     }
 
     public void ReceiveDamage(float damage)
@@ -39,7 +78,7 @@ public class PlayerController : MonoBehaviour
 
     public void PlayFireSound()
     {
-        this.audioSource.PlayOneShot(this.fireSound);
+        this.audioSource.PlayOneShot(this.gunController.fireSound);
     }
 
     public void AddBulletImpact(Vector3 pos)
@@ -95,7 +134,7 @@ public class PlayerController : MonoBehaviour
             this.fpsCamera.transform.Rotate(-vertical * 0.7f, 0, 0);
 
             Vector3 euler = this.fpsCamera.transform.rotation.eulerAngles;
-            float maxBottomRotation = 30;
+            float maxBottomRotation = 44;
             float maxTopRotation = -30;
             float newX = 0;
 
@@ -148,18 +187,56 @@ public class PlayerController : MonoBehaviour
             this.useGun = true;
             this.gunWrapper.SetActive(true);
             this.grenadeWrapper.SetActive(false);
+            CanvasController.Instance.SetVisibleSight(true);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             this.useGun = false;
             this.gunWrapper.SetActive(false);
             this.grenadeWrapper.SetActive(true);
+            CanvasController.Instance.SetVisibleSight(false);
         }
     }
 
     void PickWeapon()
     {
+        if (Input.GetMouseButtonDown(1) && this.DetectGun != null)
+        {
+            Transform oddGun = this.gunWrapper.transform.GetChild(0);
+            Transform newGun = this.DetectGun.transform;
 
+            newGun.transform.position = oddGun.transform.position;
+            newGun.transform.rotation = oddGun.transform.rotation;
+
+            oddGun.SetParent(null);
+            oddGun.GetComponent<BoxCollider>().isTrigger = false;
+            Rigidbody rigid = oddGun.GetComponent<Rigidbody>();
+            rigid.isKinematic = false;
+            rigid.AddForce((this.transform.forward + Vector3.up) * 250);
+
+            newGun.SetParent(this.gunWrapper.transform);
+            newGun.GetComponent<BoxCollider>().isTrigger = true;
+            rigid = newGun.GetComponent<Rigidbody>();
+            rigid.isKinematic = true;
+            
+            this.gunController = newGun.GetComponent<GunController>();
+            UpdateBulletOnScreen();
+        }
+    }
+
+    void DetectWeapon()
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(this.fpsCamera.transform.position, this.fpsCamera.transform.forward, out hit, 3f))
+        {
+            if (hit.transform.tag.Equals("Gun"))
+            {
+                this.DetectGun = hit.transform.gameObject;
+                return;
+            }
+        }
+
+        this.DetectGun = null;
     }
 
     private void Update()
@@ -170,6 +247,7 @@ public class PlayerController : MonoBehaviour
         Jump();
         Zoom();
         ChangeWeapon();
+        DetectWeapon();
         PickWeapon();
     }
 }

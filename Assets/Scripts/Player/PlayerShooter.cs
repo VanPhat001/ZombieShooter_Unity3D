@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerShooter : MonoBehaviour
 {
-    float timeBetweenShoots = 0.1f;
+    float timeBetweenShoots => PlayerController.Instance.gunController.timeBetweenShoots;
     float tick = 0;
 
     public void ShootObject()
@@ -31,17 +29,24 @@ public class PlayerShooter : MonoBehaviour
             string tag = hit.transform.tag;
             Debug.Log(tag);
 
+            bool isShoot = false;
             if (tag.StartsWith("Object"))
             {
+                isShoot = true;
                 ShootObject();
-                PlayerController.Instance.PlayFireSound();
-                PlayerController.Instance.AddBulletImpact(hit.point);
             }
             else if (tag.Equals("Zombie"))
             {
+                isShoot = true;
                 ShootZombie(hit);
+            }
+
+            if (isShoot)
+            {
                 PlayerController.Instance.PlayFireSound();
                 PlayerController.Instance.AddBulletImpact(hit.point);
+                PlayerController.Instance.gunController.Shoot();
+                PlayerController.Instance.UpdateBulletOnScreen();
             }
         }
     }
@@ -62,15 +67,40 @@ public class PlayerShooter : MonoBehaviour
     private void Update()
     {
         this.tick += Time.deltaTime;
-        if (Input.GetMouseButton(0) && this.tick >= this.timeBetweenShoots)
-        {
-            if (PlayerController.Instance.useGun)
+        PlayerController player = PlayerController.Instance;
+        GunController gunController = player.gunController;
+
+        if (player.useGun 
+            && gunController.currentBulletsInMagazine == 0 
+            && gunController.currentTotalBullets > 0)
             {
+                // reload
+            }
+
+        if (Input.GetMouseButton(0))
+        {
+            if (player.useGun)
+            {
+                if (this.tick < this.timeBetweenShoots)
+                {
+                    return;
+                }
+
+                if (gunController.currentBulletsInMagazine <= 0)
+                {
+                    return;
+                }
+
                 this.tick = 0;
                 Shoot();
             }
-            else
+            else // use grenade
             {
+                if (this.tick < 0.4f)
+                {
+                    return;
+                }
+
                 this.tick = 0;
                 ThrowGrenade();
             }

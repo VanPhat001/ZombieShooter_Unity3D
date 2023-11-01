@@ -11,9 +11,12 @@ GameObject:
   - component: {fileID: 8407993177625967179}
   - component: {fileID: 6952025810634915375}
   - component: {fileID: 4437831096801312197}
+  - component: {fileID: 2293780005242121673}
+  - component: {fileID: 4960888117618109866}
+  - component: {fileID: 1320774767442495749}
   m_Layer: 0
   m_Name: smg1
-  m_TagString: Untagged
+  m_TagString: Gun
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,3 +86,72 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2293780005242121673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4654564407857796015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97504851283b8451687fc07f9a1083df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireSound: {fileID: 8300000, guid: 6d19e1256c0d1425683fa9cb24d47f08, type: 3}
+  maxBullets: 300
+  maxBulletsInMagazine: 45
+  currentTotalBullets: 300
+  currentBulletsInMagazine: 45
+  damage: 6
+  recoil: 0.3
+  timeBetweenShoots: 0.05
+  timeReload: 2
+--- !u!65 &4960888117618109866
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4654564407857796015}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.3345178, y: 1.4343929, z: 2.8454785}
+  m_Center: {x: 0, y: 0.120087415, z: 0.21871847}
+--- !u!54 &1320774767442495749
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4654564407857796015}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

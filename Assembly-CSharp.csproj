@@ -87,6 +87,7 @@
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/ShaderPropAnimator.cs" />
      <Compile Include="Assets/Downloads/JMO Assets/WarFX/Demo/Assets/CFX_Demo_RandomDir.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/CameraController.cs" />
+     <Compile Include="Assets/Scripts/Gun/GunController.cs" />
      <Compile Include="Assets/Downloads/Low Poly Guns/Scripts/GunsMenu.cs" />
      <Compile Include="Assets/Downloads/JMO Assets/WarFX/Demo/Assets/WFX_Demo_Wall.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark03.cs" />

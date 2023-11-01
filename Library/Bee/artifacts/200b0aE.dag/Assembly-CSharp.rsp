@@ -373,6 +373,7 @@
 "Assets/Scripts/CanvasController.cs"
 "Assets/Scripts/GameController.cs"
 "Assets/Scripts/Grenade/GrenadeController.cs"
+"Assets/Scripts/Gun/GunController.cs"
 "Assets/Scripts/Player/PlayerCollision.cs"
 "Assets/Scripts/Player/PlayerController.cs"
 "Assets/Scripts/Player/PlayerShooter.cs"
