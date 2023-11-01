@@ -15,5 +15,9 @@ public class PlayerCollision : MonoBehaviour
         {
             PlayerController.Instance.ReceiveDamage(10);
         }
+        else if (tag.Equals("GhoulZombieHand"))
+        {
+            PlayerController.Instance.ReceiveDamage(damage: 14);
+        }
     }
 }

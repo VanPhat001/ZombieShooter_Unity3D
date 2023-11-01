@@ -94,6 +94,7 @@ public class GhoulZombieController : MonoBehaviour
                 return;
             }
 
+            StartCoroutine("CoroutineActiveAttack");
             switch (Random.Range(0, 2))
             {
                 case 0:
