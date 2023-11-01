@@ -29,20 +29,9 @@ public class GhoulZombieController : MonoBehaviour
         this.currentHP = Mathf.Clamp(this.currentHP - damage, 0, this.maxHP);
     }
 
-    IEnumerator CoroutineEnableAttack()
+    void MoveToGoal()
     {
-        yield return new WaitForSeconds(1.6f);
-        this.canAttack = true;
-    }
-
-    void SetIdleAction()
-    {
-        this.anima.Play("Idle");
-    }
-
-    void SetWalkAction()
-    {
-        this.anima.Play("Walk");
+        this.agent.destination = this.goal.transform.position;
     }
 
     void SetRunAction()
@@ -50,33 +39,39 @@ public class GhoulZombieController : MonoBehaviour
         this.anima.Play("Run");
     }
 
+
     void SetAttack1Action()
     {
-        canAttack = false;
         this.anima.Play("Attack1");
-        StartCoroutine("CoroutineEnableAttack");
     }
+
 
     void SetAttack2Action()
     {
-        canAttack = false;
         this.anima.Play("Attack2");
-        StartCoroutine("CoroutineEnableAttack");
     }
+
 
     void SetDeathAction()
     {
         this.anima.Play("Death");
     }
 
-    void MoveToGoal()
+    IEnumerator CoroutineActiveAttack()
     {
-        this.agent.destination = this.goal.transform.position;
+        this.canAttack = false;
+        yield return new WaitForSeconds(2f);
+        this.canAttack = true;
     }
 
     private void Update()
     {
-        if (!this.isDead && this.currentHP <= 0)
+        if (this.isDead)
+        {
+            return;
+        }
+
+        if (this.currentHP <= 0)
         {
             this.isDead = true;
             this.goal = this.gameObject;
@@ -86,7 +81,7 @@ public class GhoulZombieController : MonoBehaviour
 
             this.audioSource.PlayOneShot(this.deathSound);
 
-            Destroy(this.gameObject, 1.5f);
+            Destroy(this.gameObject, 1.02f);
             return;
         }
 

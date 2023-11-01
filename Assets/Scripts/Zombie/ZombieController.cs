@@ -57,7 +57,12 @@ public class ZombieController : MonoBehaviour
 
     private void Update()
     {
-        if (!this.isDead && this.currentHP <= 0)
+        if (this.isDead)
+        {
+            return;
+        }
+
+        if (this.currentHP <= 0)
         {
             this.isDead = true;
             this.goal = this.gameObject;
