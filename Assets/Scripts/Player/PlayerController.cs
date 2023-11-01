@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour
             if (detectGun != null)
             {
                 Renderer gunRenderer = detectGun.GetComponent<Renderer>();
-                Color customColor = new Color(0, 0, 0, 0);
+                Color customColor = new Color(1, 1, 1, 1);
                 gunRenderer.material.SetColor("_Color", customColor);
             }
 
@@ -153,14 +153,14 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    bool onGround()
+    bool OnGround()
     {
         return Physics.Raycast(this.transform.position, Vector3.down, 0.750001f);
     }
 
     void Jump()
     {
-        if (Input.GetKey(KeyCode.Space) && onGround())
+        if (Input.GetKey(KeyCode.Space) && OnGround())
         {
             this.rigid.AddForce(Vector3.up * 200);
         }
@@ -208,17 +208,19 @@ public class PlayerController : MonoBehaviour
             newGun.transform.position = oddGun.transform.position;
             newGun.transform.rotation = oddGun.transform.rotation;
 
+            // drop gun
             oddGun.SetParent(null);
             oddGun.GetComponent<BoxCollider>().isTrigger = false;
             Rigidbody rigid = oddGun.GetComponent<Rigidbody>();
             rigid.isKinematic = false;
             rigid.AddForce((this.transform.forward + Vector3.up) * 250);
 
+            // pick gun
             newGun.SetParent(this.gunWrapper.transform);
             newGun.GetComponent<BoxCollider>().isTrigger = true;
             rigid = newGun.GetComponent<Rigidbody>();
             rigid.isKinematic = true;
-            
+
             this.gunController = newGun.GetComponent<GunController>();
             UpdateBulletOnScreen();
         }

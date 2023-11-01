@@ -13,7 +13,7 @@ public class PlayerShooter : MonoBehaviour
     public void ShootZombie(RaycastHit hit)
     {
         var zombie = hit.transform.GetComponent<ZombieController>();
-        zombie.ReceiveDamage(damage: 20);
+        zombie.ReceiveDamage(damage: PlayerController.Instance.gunController.damage);
         if (zombie.currentHP <= 0)
         {
             CanvasController.Instance.AddScore(10);

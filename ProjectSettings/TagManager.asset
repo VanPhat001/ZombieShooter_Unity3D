@@ -8,6 +8,8 @@ TagManager:
   - Zombie
   - ZombieRightHand
   - ObjectGround
+  - FxTemporaire
+  - Gun
   layers:
   - Default
   - TransparentFX
