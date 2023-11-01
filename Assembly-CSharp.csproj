@@ -80,7 +80,7 @@
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/CameraController.cs" />
      <Compile Include="Assets/Downloads/Low Poly Guns/Scripts/GunsMenu.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark03.cs" />
-     <Compile Include="Assets/Scripts/Grenade/GrenadeCotroller.cs" />
+     <Compile Include="Assets/Scripts/Grenade/GrenadeController.cs" />
      <Compile Include="Assets/Scripts/Zombie/ZombieController.cs" />
      <Compile Include="Assets/Scripts/Player/PlayerCollision.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextInfoDebugTool.cs" />

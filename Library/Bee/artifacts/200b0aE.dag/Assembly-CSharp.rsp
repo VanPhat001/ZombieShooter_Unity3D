@@ -358,7 +358,7 @@
 "Assets/Downloads/Low Poly Guns/Scripts/GunView.cs"
 "Assets/Scripts/CanvasController.cs"
 "Assets/Scripts/GameController.cs"
-"Assets/Scripts/Grenade/GrenadeCotroller.cs"
+"Assets/Scripts/Grenade/GrenadeController.cs"
 "Assets/Scripts/Player/PlayerCollision.cs"
 "Assets/Scripts/Player/PlayerController.cs"
 "Assets/Scripts/Player/PlayerShooter.cs"
