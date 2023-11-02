@@ -71,10 +71,11 @@ public class PlayerShooter : MonoBehaviour
         GunController gunController = player.gunController;
 
         if (player.useGun 
+            && !player.reloading
             && gunController.currentBulletsInMagazine == 0 
             && gunController.currentTotalBullets > 0)
             {
-                // reload
+                StartCoroutine(PlayerController.Instance.CoroutineLoadBulletsIntoMagazine());
             }
 
         if (Input.GetMouseButton(0))

@@ -1,3 +1,6 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
@@ -14,6 +17,7 @@ public class PlayerController : MonoBehaviour
 
     public float currentHP { get; private set; } = 100;
     public float maxHP { get; private set; } = 100;
+    public bool reloading { get; private set; } = false;
 
     public float speed = 5f;
     public float speedUpRate = 1.8f;
@@ -184,6 +188,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
+            // use gun
             this.useGun = true;
             this.gunWrapper.SetActive(true);
             this.grenadeWrapper.SetActive(false);
@@ -191,10 +196,17 @@ public class PlayerController : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
+            // use grenade
             this.useGun = false;
             this.gunWrapper.SetActive(false);
             this.grenadeWrapper.SetActive(true);
             CanvasController.Instance.SetVisibleSight(false);
+
+            if (this.reloading)
+            {
+                this.reloading = false;
+                CanvasController.Instance.ForceStopReload();
+            }
         }
     }
 
@@ -241,8 +253,22 @@ public class PlayerController : MonoBehaviour
         this.DetectGun = null;
     }
 
+    public IEnumerator CoroutineLoadBulletsIntoMagazine()
+    {
+        this.reloading = true;
+        yield return CanvasController.Instance.CoroutineStartReload(this.gunController.timeReload);
+        this.gunController.Reload();
+        UpdateBulletOnScreen();
+        this.reloading = false;
+    }
+
     private void Update()
     {
+        if (!this.reloading && Input.GetKeyDown(KeyCode.R))
+        {
+            StartCoroutine(CoroutineLoadBulletsIntoMagazine());
+        }
+
         Move();
         RotateBody();
         RotateHead();

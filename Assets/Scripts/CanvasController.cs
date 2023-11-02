@@ -1,6 +1,6 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
+using Palmmedia.ReportGenerator.Core.Parser.Analysis;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,20 +9,49 @@ public class CanvasController : MonoBehaviour
 {
     static public CanvasController Instance { get; private set; }
 
+    private sealed class ReloadInfo
+    {
+        Image reload;
+        TMP_Text text;
+
+        public ReloadInfo(GameObject reloadImage)
+        {
+            this.reload = reloadImage.GetComponent<Image>();
+            Transform textObj = reloadImage.transform.GetChild(1);
+            this.text = textObj.GetComponent<TMP_Text>();
+        }
+
+        public void SetProgress(float progress)
+        {
+            this.reload.fillAmount = progress;
+            this.text.text = (int)(progress * 100) + "%";
+        }
+
+        public void Reset()
+        {
+            SetProgress(1);
+        }
+    }
+
+
     public TMP_Text timeText;
     public TMP_Text scoreText;
     public TMP_Text bulletRemainText;
     public Slider healthBar;
     public GameObject sight;
+    public GameObject reloadObject;
 
     public float health { get; private set; }
     public float time { get; private set; }
     public float score { get; private set; }
+    ReloadInfo reloadInfo;
+    bool stopReload = false;
 
 
     private void Start()
     {
         Instance = this;
+        this.reloadInfo = new ReloadInfo(this.reloadObject);
     }
 
     public void SetHealth(float percent)
@@ -43,8 +72,40 @@ public class CanvasController : MonoBehaviour
     }
 
     public void SetVisibleSight(bool visible)
-    {  
+    {
         this.sight.SetActive(visible);
+    }
+
+    public void SetVisibleReload(bool visible)
+    {
+        this.reloadObject.SetActive(visible);
+    }
+
+    public IEnumerator CoroutineStartReload(float duration)
+    {
+        this.stopReload = false;
+        this.SetVisibleReload(true);
+
+        this.reloadInfo.Reset();
+        float timePerTick = duration / 101.0f;
+
+        for (int percent = 100; percent >= 0; percent--)
+        {
+            if (this.stopReload)
+            {
+                break;
+            }
+
+            this.reloadInfo.SetProgress(percent / 100.0f);
+            yield return new WaitForSeconds(timePerTick);
+        }
+
+        this.SetVisibleReload(false);
+    }
+
+    public void ForceStopReload()
+    {
+        this.stopReload = true;
     }
 
     private void Update()

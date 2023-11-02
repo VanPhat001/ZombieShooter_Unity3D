@@ -16,7 +16,6 @@ public class SpawnPointsController : MonoBehaviour
             children.Add(this.transform.GetChild(i).gameObject);
         }
         this.spawnPoints = children.ToArray();
-        Debug.Log(this.spawnPoints.Length);
     }
 
     int SelectRandomSpawnPoint()

@@ -25,19 +25,6 @@ public class GunController : MonoBehaviour
         return true;
     }
 
-    IEnumerator CoroutineReload(int delta)
-    {
-        yield return new WaitForSeconds(this.timeReload);
-
-        if (delta > this.currentTotalBullets)
-        {
-            delta = this.currentTotalBullets;
-        }
-
-        this.currentBulletsInMagazine += delta;
-        this.currentTotalBullets -= delta;
-    }
-
     public bool Reload()
     {
         int delta = this.maxBulletsInMagazine - this.currentBulletsInMagazine;
@@ -47,7 +34,14 @@ public class GunController : MonoBehaviour
             return false;
         }
 
-        StartCoroutine("CoroutineReload", delta);
+        if (delta > this.currentTotalBullets)
+        {
+            delta = this.currentTotalBullets;
+        }
+
+        this.currentBulletsInMagazine += delta;
+        this.currentTotalBullets -= delta;
+
         return true;
     }
 }
