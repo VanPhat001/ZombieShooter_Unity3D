@@ -1,7 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -23,6 +20,7 @@ public class PlayerController : MonoBehaviour
     public float speedUpRate = 1.8f;
     public bool useGun { get; private set; } = true;
     public GunController gunController { get; private set; }
+    public bool isDead { get; private set; } = false;
 
     Rigidbody rigid;
     AudioSource audioSource;
@@ -58,6 +56,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         Instance = this;
+        GameController.Instance.Continue();
         Cursor.lockState = CursorLockMode.Locked;
         CanvasController.Instance.SetHealth(1);
         this.rigid = this.GetComponent<Rigidbody>();
@@ -283,6 +282,20 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        if (this.isDead)
+        {
+            return;
+        }
+
+        if (this.currentHP <= 0)
+        {
+            this.isDead = true;
+            Cursor.lockState = CursorLockMode.None;
+            GameController.Instance.Pause();
+            CanvasController.Instance.SetVisibleRestartMenuBard(true);
+            return;
+        }
+
         if (CanvasController.Instance.suggestReloadTextVisible
             && Input.GetKeyDown(KeyCode.C))
         {
@@ -293,6 +306,22 @@ public class PlayerController : MonoBehaviour
         if (!this.reloading && Input.GetKeyDown(KeyCode.R))
         {
             StartCoroutine(CoroutineLoadBulletsIntoMagazine());
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape) )
+        {
+            if (CanvasController.Instance.restartMenuBoard.activeInHierarchy)
+            {
+                GameController.Instance.Continue();
+                CanvasController.Instance.SetVisibleRestartMenuBard(false);
+                Cursor.lockState = CursorLockMode.Locked;
+            }
+            else
+            {
+                GameController.Instance.Pause();
+                CanvasController.Instance.SetVisibleRestartMenuBard(true);
+                Cursor.lockState = CursorLockMode.None;
+            }
         }
 
         Move();

@@ -41,6 +41,7 @@ public class CanvasController : MonoBehaviour
     public GameObject sight;
     public GameObject reloadObject;
     public GameObject suggestReloadText;
+    public GameObject restartMenuBoard;
 
     public float health { get; private set; }
     public float time { get; private set; }
@@ -121,6 +122,14 @@ public class CanvasController : MonoBehaviour
         if (this.suggestReloadText.activeInHierarchy != visible)
         {
             this.suggestReloadText.SetActive(visible);
+        }
+    }
+
+    public void SetVisibleRestartMenuBard(bool visible)
+    {
+        if (this.restartMenuBoard.activeInHierarchy != visible)
+        {
+            this.restartMenuBoard.SetActive(visible);
         }
     }
 
