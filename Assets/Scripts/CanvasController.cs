@@ -40,10 +40,12 @@ public class CanvasController : MonoBehaviour
     public Slider healthBar;
     public GameObject sight;
     public GameObject reloadObject;
+    public GameObject suggestReloadText;
 
     public float health { get; private set; }
     public float time { get; private set; }
     public float score { get; private set; }
+    public bool suggestReloadTextVisible => this.suggestReloadText.activeInHierarchy;
     ReloadInfo reloadInfo;
     bool stopReload = false;
 
@@ -73,12 +75,18 @@ public class CanvasController : MonoBehaviour
 
     public void SetVisibleSight(bool visible)
     {
-        this.sight.SetActive(visible);
+        if (this.sight.activeInHierarchy != visible)
+        {
+            this.sight.SetActive(visible);
+        }
     }
 
     public void SetVisibleReload(bool visible)
     {
-        this.reloadObject.SetActive(visible);
+        if (this.reloadObject.activeInHierarchy != visible)
+        {
+            this.reloadObject.SetActive(visible);
+        }
     }
 
     public IEnumerator CoroutineStartReload(float duration)
@@ -106,6 +114,14 @@ public class CanvasController : MonoBehaviour
     public void ForceStopReload()
     {
         this.stopReload = true;
+    }
+
+    public void SetVisibleSuggestReloadText(bool visible)
+    {
+        if (this.suggestReloadText.activeInHierarchy != visible)
+        {
+            this.suggestReloadText.SetActive(visible);
+        }
     }
 
     private void Update()

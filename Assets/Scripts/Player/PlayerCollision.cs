@@ -9,11 +9,34 @@ public class PlayerCollision : MonoBehaviour
     //     Debug.Log(other.transform.tag);
     // }
 
-    private void OnTriggerEnter(Collider other) {
-        tag = other.tag;
+    private void OnTriggerEnter(Collider other)
+    {
+        string tag = other.tag;
         if (tag.Equals("ZombieRightHand"))
         {
             PlayerController.Instance.ReceiveDamage(10);
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        string tag = other.tag;
+        if (tag.Equals("WeaponsPack"))
+        {
+            CanvasController.Instance.SetVisibleSuggestReloadText(true);
+        }
+        else if (tag.Equals("HealthPack"))
+        {
+
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        string tag = other.tag;
+        if (tag.Equals("WeaponsPack"))
+        {
+            CanvasController.Instance.SetVisibleSuggestReloadText(false);
         }
     }
 }

@@ -3960,3 +3960,1848 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:scripting/monoscript/fileName/CFX_AutoDestructShuriken.cs: 36bf2f3a00d4f92e7516bb0c5ac5f44d -> 7d622660cad3b608810f352fdbc5d485
   custom:scripting/monoscript/fileName/WFX_Demo_New.cs: 9069327d8d485dc6e94b0abfa67c4280 -> 225d44912cd20a0c8b007d7146330c83
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Thread 0x16dc33000 may have been prematurely finalized
+- Loaded All Assemblies, in  0.344 seconds
+Refreshing native plugins compatible for Editor in 0.89 ms, found 2 plugins.
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.659 seconds
+Domain Reload Profiling: 1003ms
+	BeginReloadAssembly (114ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (3ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (39ms)
+	RebuildCommonClasses (23ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (22ms)
+	LoadAllAssembliesAndSetupDomain (177ms)
+		LoadAssemblies (186ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (37ms)
+			TypeCache.Refresh (19ms)
+				TypeCache.ScanAssembly (1ms)
+			ScanForSourceGeneratedMonoScriptInfo (10ms)
+			ResolveRequiredComponents (5ms)
+	FinalizeReload (659ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (228ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (4ms)
+			SetLoadedEditorAssemblies (2ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (33ms)
+			ProcessInitializeOnLoadAttributes (178ms)
+			ProcessInitializeOnLoadMethodAttributes (11ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (2ms)
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 0.83 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3164 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 21 unused Assets / (29.9 KB). Loaded Objects now: 3842.
+Memory consumption went from 323.4 MB to 323.4 MB.
+Total: 2.719791 ms (FindLiveObjects: 0.131625 ms CreateObjectMapping: 0.061250 ms MarkObjects: 2.490875 ms  DeleteObjects: 0.035542 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:scripting/monoscript/fileName/CFX_SpawnSystem.cs: 25a5e89f630a68b5be2dcafea5156cb7 -> da90548e33a5ac9767c2ab325529961a
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:scripting/monoscript/fileName/GrenadeCotroller.cs: 875e0b54e8b2b9de0d6d251a295ebd69 -> 
+  custom:scripting/monoscript/fileName/CFXEasyEditor.cs: f5aa4f7dc0fb6cc1f062891d3d23ad3a -> 975509eb43d0b0d90d19d984ce47d25d
+  custom:scripting/monoscript/fileName/WFX_Demo_RandomDir.cs: 5adb98288eccda10fe06003139c10717 -> 83412d56870e7b7abf13729c1e4f5956
+  custom:scripting/monoscript/fileName/CFX_Demo_RandomDir.cs: ac40046481e5c4f71b9d19df2c090925 -> 06fce4b0d835d8793ccf8307925e464f
+  custom:scripting/monoscript/fileName/GhoulZombieController.cs: c2cb6201a8a4f30eeb9dbe3d83ffae65 -> 
+  custom:scripting/monoscript/fileName/WFX_LightFlicker.cs: 8611c610ebd4ed60d799ffbda1b30023 -> 1dfc4e18a67da64c518b9518e62ac4fe
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:scripting/monoscript/fileName/CFX_SpawnSystemEditor.cs: 961dd98ee368d293720faa5e6180c55f -> 8ef4ed7f7ca5c207cc3108bdafbacf7e
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:scripting/monoscript/fileName/CFX_Demo_RotateCamera.cs: 4093981287d7c6100e9fe689f7c9411e -> 1b6c7bbcbc0a01f776aafda62612b729
+  custom:scripting/monoscript/fileName/WFX_Demo_DeleteAfterDelay.cs: feab4ecb418cb313790125ab2f3e742b -> a8456c85d9636ec3b34432ce15771790
+  custom:scripting/monoscript/fileName/WFX_BulletHoleDecal.cs: f491e9aef5a5f2c367f064bcc6c862c0 -> b2a50a5c52cc82fa50f26101cc423417
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:scripting/monoscript/fileName/WFX_Demo_Wall.cs: 45876beed7f29c422b20e2de2113200e -> ebe32a1844666a18dc6e88646d62cdf3
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:scripting/monoscript/fileName/CFX_AutoStopLoopedEffect.cs: 62ac9e0b32d469c4b76269bc70152315 -> 0a1116784d96426e30ae544ef0d48111
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:scripting/monoscript/fileName/CFX_LightIntensityFade.cs: 2c0ab7605cddfd3eb20461d360619486 -> cdc33b13e94fac5095d515fc63c5bc75
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/WFX_Demo.cs: 9c911057018d0fe43728eb8d68b9a4e0 -> 16a8c51f1dc0063656a39d0352fd910f
+  custom:scripting/monoscript/fileName/CFX_Demo_Translate.cs: de26e2b5a3c6cbaa3cca0e0576709ad7 -> c85e572516e08f311291871f16fd4e55
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/CFX_AutoDestructShuriken.cs: 36bf2f3a00d4f92e7516bb0c5ac5f44d -> 7d622660cad3b608810f352fdbc5d485
+  custom:scripting/monoscript/fileName/WFX_Demo_New.cs: 9069327d8d485dc6e94b0abfa67c4280 -> 225d44912cd20a0c8b007d7146330c83
+========================================================================
+Received Import Request.
+  Time since last request: 7218.903810 seconds.
+  path: Assets/Resources/WW2WeaponsPack.fbx
+  artifactKey: Guid(71ab3eb6da2c34f099c2b7917f34c6c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/WW2WeaponsPack.fbx using Guid(71ab3eb6da2c34f099c2b7917f34c6c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f389a61372c5aa4c5aae1ad75326ac9') in 0.906135 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 547
+========================================================================
+Received Import Request.
+  Time since last request: 5.775954 seconds.
+  path: Assets/Prefabs/assault4.prefab
+  artifactKey: Guid(07e3bafc50564455aac8e9c5fb8dface) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/assault4.prefab using Guid(07e3bafc50564455aac8e9c5fb8dface) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b45402ec44bfc577f1ed6ad81b6856ec') in 0.061190 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 14
+========================================================================
+Received Import Request.
+  Time since last request: 29.025133 seconds.
+  path: Assets/Prefabs/WeaponsPack.fbx
+  artifactKey: Guid(71ab3eb6da2c34f099c2b7917f34c6c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/WeaponsPack.fbx using Guid(71ab3eb6da2c34f099c2b7917f34c6c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ce99e7db585f0251eb58fa11eb1fac8') in 0.696051 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 547
+========================================================================
+Received Import Request.
+  Time since last request: 34.072296 seconds.
+  path: Assets/Prefabs/WeaponsPack.fbx
+  artifactKey: Guid(71ab3eb6da2c34f099c2b7917f34c6c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/WeaponsPack.fbx using Guid(71ab3eb6da2c34f099c2b7917f34c6c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19c64b9bd8aaa3dc492a192a82e57a8c') in 0.695731 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 547
+========================================================================
+Received Import Request.
+  Time since last request: 39.806413 seconds.
+  path: Assets/Prefabs/WeaponsPack.fbx
+  artifactKey: Guid(71ab3eb6da2c34f099c2b7917f34c6c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/WeaponsPack.fbx using Guid(71ab3eb6da2c34f099c2b7917f34c6c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '807458af018e7b1572af71cda4a130bc') in 0.607009 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 547
+========================================================================
+Received Import Request.
+  Time since last request: 24.669811 seconds.
+  path: ProjectSettings/TagManager.asset
+  artifactKey: Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing ProjectSettings/TagManager.asset using Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46082ae2229bd1410296f06182998222') in 0.002153 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 48.452047 seconds.
+  path: Assets/Prefabs/WeaponsPack.prefab
+  artifactKey: Guid(2c1af5d22a0e8462cbfa4de83d02e0b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/WeaponsPack.prefab using Guid(2c1af5d22a0e8462cbfa4de83d02e0b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'adba972dd0cf73d2f84f711117f3fd90') in 0.010885 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 392
+========================================================================
+Received Import Request.
+  Time since last request: 42.117647 seconds.
+  path: Assets/Downloads/weapons-pack
+  artifactKey: Guid(3f722377194b34048844c1fee7ac153e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Downloads/weapons-pack using Guid(3f722377194b34048844c1fee7ac153e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebd4f8d6cee39ce458aab63cf95116ba') in 0.002493 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.366248 seconds.
+  path: Assets/Downloads/weapons-pack/WW2WeaponsPack.fbx
+  artifactKey: Guid(9fc77395187e04e04814ca30d3ceb940) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Downloads/weapons-pack/WW2WeaponsPack.fbx using Guid(9fc77395187e04e04814ca30d3ceb940) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb502bad0c8e4e46bd9a56be0572d8c0') in 0.641680 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 547
+========================================================================
+Received Import Request.
+  Time since last request: 7.189314 seconds.
+  path: Assets/Downloads/weapons-pack/WW2WeaponsPack.fbx
+  artifactKey: Guid(9fc77395187e04e04814ca30d3ceb940) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Downloads/weapons-pack/WW2WeaponsPack.fbx using Guid(9fc77395187e04e04814ca30d3ceb940) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b214701ca64fbc69967342f93e6539c') in 0.680910 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 547
+========================================================================
+Received Import Request.
+  Time since last request: 44.677725 seconds.
+  path: Assets/Prefabs/WeaponsPack.prefab
+  artifactKey: Guid(2c1af5d22a0e8462cbfa4de83d02e0b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/WeaponsPack.prefab using Guid(2c1af5d22a0e8462cbfa4de83d02e0b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87fdd25b9b811eddf8c4ccf55311f7bd') in 0.029205 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 938
+========================================================================
+Received Import Request.
+  Time since last request: 20.764508 seconds.
+  path: Assets/Prefabs/WeaponsPack.prefab
+  artifactKey: Guid(2c1af5d22a0e8462cbfa4de83d02e0b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/WeaponsPack.prefab using Guid(2c1af5d22a0e8462cbfa4de83d02e0b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ac523f34dab428fb0bacbbc2ead43af') in 0.020262 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 939
+========================================================================
+Received Import Request.
+  Time since last request: 16.113787 seconds.
+  path: Assets/Prefabs/WeaponsPack.prefab
+  artifactKey: Guid(2c1af5d22a0e8462cbfa4de83d02e0b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/WeaponsPack.prefab using Guid(2c1af5d22a0e8462cbfa4de83d02e0b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c9778320aede878eb0a8ef12e5f5cf4') in 0.022854 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 939
+========================================================================
+Received Import Request.
+  Time since last request: 14.536781 seconds.
+  path: Assets/Prefabs/WeaponsPack.prefab
+  artifactKey: Guid(2c1af5d22a0e8462cbfa4de83d02e0b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/WeaponsPack.prefab using Guid(2c1af5d22a0e8462cbfa4de83d02e0b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '195c4edb30a471eca5938f27a4e22a72') in 0.020577 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 939
+========================================================================
+Received Import Request.
+  Time since last request: 2.452321 seconds.
+  path: Assets/Prefabs/WeaponsPack.prefab
+  artifactKey: Guid(2c1af5d22a0e8462cbfa4de83d02e0b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/WeaponsPack.prefab using Guid(2c1af5d22a0e8462cbfa4de83d02e0b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65a74751db6eb864b01a4e1dcc9a6dcd') in 0.021214 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 939
+========================================================================
+Received Import Request.
+  Time since last request: 2.073202 seconds.
+  path: Assets/Prefabs/WeaponsPack.prefab
+  artifactKey: Guid(2c1af5d22a0e8462cbfa4de83d02e0b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/WeaponsPack.prefab using Guid(2c1af5d22a0e8462cbfa4de83d02e0b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64c2ff0443c932f06d02f69b3e05b0ab') in 0.020370 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 939
+========================================================================
+Received Import Request.
+  Time since last request: 1.613814 seconds.
+  path: Assets/Prefabs/WeaponsPack.prefab
+  artifactKey: Guid(2c1af5d22a0e8462cbfa4de83d02e0b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/WeaponsPack.prefab using Guid(2c1af5d22a0e8462cbfa4de83d02e0b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49062fda1818e104d594ac7caf101ae0') in 0.019513 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 939
+========================================================================
+Received Import Request.
+  Time since last request: 2.235037 seconds.
+  path: Assets/Prefabs/WeaponsPack.prefab
+  artifactKey: Guid(2c1af5d22a0e8462cbfa4de83d02e0b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/WeaponsPack.prefab using Guid(2c1af5d22a0e8462cbfa4de83d02e0b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8502980c2a24e78b3c8a5ef51100221d') in 0.019512 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 939
+========================================================================
+Received Import Request.
+  Time since last request: 6.889124 seconds.
+  path: Assets/Prefabs/WeaponsPack.prefab
+  artifactKey: Guid(2c1af5d22a0e8462cbfa4de83d02e0b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/WeaponsPack.prefab using Guid(2c1af5d22a0e8462cbfa4de83d02e0b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ce251b9c0106813a0245b78691966db') in 0.020680 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 939
+========================================================================
+Received Import Request.
+  Time since last request: 0.989479 seconds.
+  path: Assets/Prefabs/WeaponsPack.prefab
+  artifactKey: Guid(2c1af5d22a0e8462cbfa4de83d02e0b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/WeaponsPack.prefab using Guid(2c1af5d22a0e8462cbfa4de83d02e0b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e672dda72c0be61b5516d76ac16ed94') in 0.019556 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 939
+========================================================================
+Received Import Request.
+  Time since last request: 19.851521 seconds.
+  path: Assets/Prefabs/WeaponsPack.prefab
+  artifactKey: Guid(2c1af5d22a0e8462cbfa4de83d02e0b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/WeaponsPack.prefab using Guid(2c1af5d22a0e8462cbfa4de83d02e0b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22ac0239bcb84ff37adc5fe31eaef021') in 0.020129 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 939
+========================================================================
+Received Import Request.
+  Time since last request: 2.206110 seconds.
+  path: Assets/Prefabs/WeaponsPack.prefab
+  artifactKey: Guid(2c1af5d22a0e8462cbfa4de83d02e0b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/WeaponsPack.prefab using Guid(2c1af5d22a0e8462cbfa4de83d02e0b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75a496f2282b616a6ab24fffb9edd686') in 0.021047 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 939
+========================================================================
+Received Import Request.
+  Time since last request: 29.028968 seconds.
+  path: Assets/Prefabs/WeaponsPack.prefab
+  artifactKey: Guid(2c1af5d22a0e8462cbfa4de83d02e0b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/WeaponsPack.prefab using Guid(2c1af5d22a0e8462cbfa4de83d02e0b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cbe913572d2afbcc432a636129b4b5e2') in 0.022549 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 939
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Thread 0x16dc33000 may have been prematurely finalized
+- Loaded All Assemblies, in  0.374 seconds
+Refreshing native plugins compatible for Editor in 0.87 ms, found 2 plugins.
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.672 seconds
+Domain Reload Profiling: 1047ms
+	BeginReloadAssembly (106ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (3ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (44ms)
+	RebuildCommonClasses (24ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (16ms)
+	LoadAllAssembliesAndSetupDomain (220ms)
+		LoadAssemblies (230ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (25ms)
+			TypeCache.Refresh (18ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (673ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (236ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (4ms)
+			SetLoadedEditorAssemblies (2ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (34ms)
+			ProcessInitializeOnLoadAttributes (184ms)
+			ProcessInitializeOnLoadMethodAttributes (10ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (3ms)
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 0.88 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3164 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 21 unused Assets / (30.0 KB). Loaded Objects now: 3845.
+Memory consumption went from 326.8 MB to 326.8 MB.
+Total: 2.350208 ms (FindLiveObjects: 0.154750 ms CreateObjectMapping: 0.044083 ms MarkObjects: 2.105167 ms  DeleteObjects: 0.045750 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:scripting/monoscript/fileName/CFX_SpawnSystem.cs: 25a5e89f630a68b5be2dcafea5156cb7 -> da90548e33a5ac9767c2ab325529961a
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:scripting/monoscript/fileName/GrenadeCotroller.cs: 875e0b54e8b2b9de0d6d251a295ebd69 -> 
+  custom:scripting/monoscript/fileName/CFXEasyEditor.cs: f5aa4f7dc0fb6cc1f062891d3d23ad3a -> 975509eb43d0b0d90d19d984ce47d25d
+  custom:scripting/monoscript/fileName/WFX_Demo_RandomDir.cs: 5adb98288eccda10fe06003139c10717 -> 83412d56870e7b7abf13729c1e4f5956
+  custom:scripting/monoscript/fileName/CFX_Demo_RandomDir.cs: ac40046481e5c4f71b9d19df2c090925 -> 06fce4b0d835d8793ccf8307925e464f
+  custom:scripting/monoscript/fileName/GhoulZombieController.cs: c2cb6201a8a4f30eeb9dbe3d83ffae65 -> 
+  custom:scripting/monoscript/fileName/WFX_LightFlicker.cs: 8611c610ebd4ed60d799ffbda1b30023 -> 1dfc4e18a67da64c518b9518e62ac4fe
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:scripting/monoscript/fileName/CFX_SpawnSystemEditor.cs: 961dd98ee368d293720faa5e6180c55f -> 8ef4ed7f7ca5c207cc3108bdafbacf7e
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:scripting/monoscript/fileName/CFX_Demo_RotateCamera.cs: 4093981287d7c6100e9fe689f7c9411e -> 1b6c7bbcbc0a01f776aafda62612b729
+  custom:scripting/monoscript/fileName/WFX_Demo_DeleteAfterDelay.cs: feab4ecb418cb313790125ab2f3e742b -> a8456c85d9636ec3b34432ce15771790
+  custom:scripting/monoscript/fileName/WFX_BulletHoleDecal.cs: f491e9aef5a5f2c367f064bcc6c862c0 -> b2a50a5c52cc82fa50f26101cc423417
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:scripting/monoscript/fileName/WFX_Demo_Wall.cs: 45876beed7f29c422b20e2de2113200e -> ebe32a1844666a18dc6e88646d62cdf3
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:scripting/monoscript/fileName/CFX_AutoStopLoopedEffect.cs: 62ac9e0b32d469c4b76269bc70152315 -> 0a1116784d96426e30ae544ef0d48111
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:scripting/monoscript/fileName/CFX_LightIntensityFade.cs: 2c0ab7605cddfd3eb20461d360619486 -> cdc33b13e94fac5095d515fc63c5bc75
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/WFX_Demo.cs: 9c911057018d0fe43728eb8d68b9a4e0 -> 16a8c51f1dc0063656a39d0352fd910f
+  custom:scripting/monoscript/fileName/CFX_Demo_Translate.cs: de26e2b5a3c6cbaa3cca0e0576709ad7 -> c85e572516e08f311291871f16fd4e55
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/CFX_AutoDestructShuriken.cs: 36bf2f3a00d4f92e7516bb0c5ac5f44d -> 7d622660cad3b608810f352fdbc5d485
+  custom:scripting/monoscript/fileName/WFX_Demo_New.cs: 9069327d8d485dc6e94b0abfa67c4280 -> 225d44912cd20a0c8b007d7146330c83
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Thread 0x16dc33000 may have been prematurely finalized
+- Loaded All Assemblies, in  0.356 seconds
+Refreshing native plugins compatible for Editor in 0.72 ms, found 2 plugins.
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.659 seconds
+Domain Reload Profiling: 1015ms
+	BeginReloadAssembly (123ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (3ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (41ms)
+	RebuildCommonClasses (24ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (15ms)
+	LoadAllAssembliesAndSetupDomain (186ms)
+		LoadAssemblies (201ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (37ms)
+			TypeCache.Refresh (28ms)
+				TypeCache.ScanAssembly (1ms)
+			ScanForSourceGeneratedMonoScriptInfo (5ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (659ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (228ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (2ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (34ms)
+			ProcessInitializeOnLoadAttributes (176ms)
+			ProcessInitializeOnLoadMethodAttributes (10ms)
+			AfterProcessingInitializeOnLoad (2ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (2ms)
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 0.85 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3164 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 21 unused Assets / (29.9 KB). Loaded Objects now: 3848.
+Memory consumption went from 331.4 MB to 331.4 MB.
+Total: 2.347125 ms (FindLiveObjects: 0.130875 ms CreateObjectMapping: 0.041167 ms MarkObjects: 2.124250 ms  DeleteObjects: 0.050125 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:scripting/monoscript/fileName/CFX_SpawnSystem.cs: 25a5e89f630a68b5be2dcafea5156cb7 -> da90548e33a5ac9767c2ab325529961a
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:scripting/monoscript/fileName/GrenadeCotroller.cs: 875e0b54e8b2b9de0d6d251a295ebd69 -> 
+  custom:scripting/monoscript/fileName/CFXEasyEditor.cs: f5aa4f7dc0fb6cc1f062891d3d23ad3a -> 975509eb43d0b0d90d19d984ce47d25d
+  custom:scripting/monoscript/fileName/WFX_Demo_RandomDir.cs: 5adb98288eccda10fe06003139c10717 -> 83412d56870e7b7abf13729c1e4f5956
+  custom:scripting/monoscript/fileName/CFX_Demo_RandomDir.cs: ac40046481e5c4f71b9d19df2c090925 -> 06fce4b0d835d8793ccf8307925e464f
+  custom:scripting/monoscript/fileName/GhoulZombieController.cs: c2cb6201a8a4f30eeb9dbe3d83ffae65 -> 
+  custom:scripting/monoscript/fileName/WFX_LightFlicker.cs: 8611c610ebd4ed60d799ffbda1b30023 -> 1dfc4e18a67da64c518b9518e62ac4fe
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:scripting/monoscript/fileName/CFX_SpawnSystemEditor.cs: 961dd98ee368d293720faa5e6180c55f -> 8ef4ed7f7ca5c207cc3108bdafbacf7e
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:scripting/monoscript/fileName/CFX_Demo_RotateCamera.cs: 4093981287d7c6100e9fe689f7c9411e -> 1b6c7bbcbc0a01f776aafda62612b729
+  custom:scripting/monoscript/fileName/WFX_Demo_DeleteAfterDelay.cs: feab4ecb418cb313790125ab2f3e742b -> a8456c85d9636ec3b34432ce15771790
+  custom:scripting/monoscript/fileName/WFX_BulletHoleDecal.cs: f491e9aef5a5f2c367f064bcc6c862c0 -> b2a50a5c52cc82fa50f26101cc423417
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:scripting/monoscript/fileName/WFX_Demo_Wall.cs: 45876beed7f29c422b20e2de2113200e -> ebe32a1844666a18dc6e88646d62cdf3
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:scripting/monoscript/fileName/CFX_AutoStopLoopedEffect.cs: 62ac9e0b32d469c4b76269bc70152315 -> 0a1116784d96426e30ae544ef0d48111
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:scripting/monoscript/fileName/CFX_LightIntensityFade.cs: 2c0ab7605cddfd3eb20461d360619486 -> cdc33b13e94fac5095d515fc63c5bc75
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/WFX_Demo.cs: 9c911057018d0fe43728eb8d68b9a4e0 -> 16a8c51f1dc0063656a39d0352fd910f
+  custom:scripting/monoscript/fileName/CFX_Demo_Translate.cs: de26e2b5a3c6cbaa3cca0e0576709ad7 -> c85e572516e08f311291871f16fd4e55
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/CFX_AutoDestructShuriken.cs: 36bf2f3a00d4f92e7516bb0c5ac5f44d -> 7d622660cad3b608810f352fdbc5d485
+  custom:scripting/monoscript/fileName/WFX_Demo_New.cs: 9069327d8d485dc6e94b0abfa67c4280 -> 225d44912cd20a0c8b007d7146330c83
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Thread 0x16dc33000 may have been prematurely finalized
+- Loaded All Assemblies, in  0.271 seconds
+Refreshing native plugins compatible for Editor in 0.82 ms, found 2 plugins.
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.470 seconds
+Domain Reload Profiling: 742ms
+	BeginReloadAssembly (110ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (3ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (40ms)
+	RebuildCommonClasses (24ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (15ms)
+	LoadAllAssembliesAndSetupDomain (115ms)
+		LoadAssemblies (140ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (12ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (470ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (240ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (4ms)
+			SetLoadedEditorAssemblies (9ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (37ms)
+			ProcessInitializeOnLoadAttributes (179ms)
+			ProcessInitializeOnLoadMethodAttributes (11ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (3ms)
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 0.68 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3164 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 21 unused Assets / (29.9 KB). Loaded Objects now: 3851.
+Memory consumption went from 336.0 MB to 335.9 MB.
+Total: 2.437167 ms (FindLiveObjects: 0.134000 ms CreateObjectMapping: 0.039625 ms MarkObjects: 2.218666 ms  DeleteObjects: 0.044291 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:scripting/monoscript/fileName/CFX_SpawnSystem.cs: 25a5e89f630a68b5be2dcafea5156cb7 -> da90548e33a5ac9767c2ab325529961a
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:scripting/monoscript/fileName/GrenadeCotroller.cs: 875e0b54e8b2b9de0d6d251a295ebd69 -> 
+  custom:scripting/monoscript/fileName/CFXEasyEditor.cs: f5aa4f7dc0fb6cc1f062891d3d23ad3a -> 975509eb43d0b0d90d19d984ce47d25d
+  custom:scripting/monoscript/fileName/WFX_Demo_RandomDir.cs: 5adb98288eccda10fe06003139c10717 -> 83412d56870e7b7abf13729c1e4f5956
+  custom:scripting/monoscript/fileName/CFX_Demo_RandomDir.cs: ac40046481e5c4f71b9d19df2c090925 -> 06fce4b0d835d8793ccf8307925e464f
+  custom:scripting/monoscript/fileName/GhoulZombieController.cs: c2cb6201a8a4f30eeb9dbe3d83ffae65 -> 
+  custom:scripting/monoscript/fileName/WFX_LightFlicker.cs: 8611c610ebd4ed60d799ffbda1b30023 -> 1dfc4e18a67da64c518b9518e62ac4fe
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:scripting/monoscript/fileName/CFX_SpawnSystemEditor.cs: 961dd98ee368d293720faa5e6180c55f -> 8ef4ed7f7ca5c207cc3108bdafbacf7e
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:scripting/monoscript/fileName/CFX_Demo_RotateCamera.cs: 4093981287d7c6100e9fe689f7c9411e -> 1b6c7bbcbc0a01f776aafda62612b729
+  custom:scripting/monoscript/fileName/WFX_Demo_DeleteAfterDelay.cs: feab4ecb418cb313790125ab2f3e742b -> a8456c85d9636ec3b34432ce15771790
+  custom:scripting/monoscript/fileName/WFX_BulletHoleDecal.cs: f491e9aef5a5f2c367f064bcc6c862c0 -> b2a50a5c52cc82fa50f26101cc423417
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:scripting/monoscript/fileName/WFX_Demo_Wall.cs: 45876beed7f29c422b20e2de2113200e -> ebe32a1844666a18dc6e88646d62cdf3
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:scripting/monoscript/fileName/CFX_AutoStopLoopedEffect.cs: 62ac9e0b32d469c4b76269bc70152315 -> 0a1116784d96426e30ae544ef0d48111
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:scripting/monoscript/fileName/CFX_LightIntensityFade.cs: 2c0ab7605cddfd3eb20461d360619486 -> cdc33b13e94fac5095d515fc63c5bc75
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/WFX_Demo.cs: 9c911057018d0fe43728eb8d68b9a4e0 -> 16a8c51f1dc0063656a39d0352fd910f
+  custom:scripting/monoscript/fileName/CFX_Demo_Translate.cs: de26e2b5a3c6cbaa3cca0e0576709ad7 -> c85e572516e08f311291871f16fd4e55
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/CFX_AutoDestructShuriken.cs: 36bf2f3a00d4f92e7516bb0c5ac5f44d -> 7d622660cad3b608810f352fdbc5d485
+  custom:scripting/monoscript/fileName/WFX_Demo_New.cs: 9069327d8d485dc6e94b0abfa67c4280 -> 225d44912cd20a0c8b007d7146330c83
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Thread 0x16dc33000 may have been prematurely finalized
+- Loaded All Assemblies, in  0.265 seconds
+Refreshing native plugins compatible for Editor in 0.90 ms, found 2 plugins.
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.673 seconds
+Domain Reload Profiling: 938ms
+	BeginReloadAssembly (105ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (3ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (40ms)
+	RebuildCommonClasses (23ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (14ms)
+	LoadAllAssembliesAndSetupDomain (114ms)
+		LoadAssemblies (140ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (11ms)
+			TypeCache.Refresh (6ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (673ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (233ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (32ms)
+			ProcessInitializeOnLoadAttributes (183ms)
+			ProcessInitializeOnLoadMethodAttributes (10ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (3ms)
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 0.66 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3164 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 21 unused Assets / (30.0 KB). Loaded Objects now: 3854.
+Memory consumption went from 340.5 MB to 340.5 MB.
+Total: 2.699875 ms (FindLiveObjects: 0.141667 ms CreateObjectMapping: 0.043375 ms MarkObjects: 2.400750 ms  DeleteObjects: 0.113250 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:scripting/monoscript/fileName/CFX_SpawnSystem.cs: 25a5e89f630a68b5be2dcafea5156cb7 -> da90548e33a5ac9767c2ab325529961a
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:scripting/monoscript/fileName/GrenadeCotroller.cs: 875e0b54e8b2b9de0d6d251a295ebd69 -> 
+  custom:scripting/monoscript/fileName/CFXEasyEditor.cs: f5aa4f7dc0fb6cc1f062891d3d23ad3a -> 975509eb43d0b0d90d19d984ce47d25d
+  custom:scripting/monoscript/fileName/WFX_Demo_RandomDir.cs: 5adb98288eccda10fe06003139c10717 -> 83412d56870e7b7abf13729c1e4f5956
+  custom:scripting/monoscript/fileName/CFX_Demo_RandomDir.cs: ac40046481e5c4f71b9d19df2c090925 -> 06fce4b0d835d8793ccf8307925e464f
+  custom:scripting/monoscript/fileName/GhoulZombieController.cs: c2cb6201a8a4f30eeb9dbe3d83ffae65 -> 
+  custom:scripting/monoscript/fileName/WFX_LightFlicker.cs: 8611c610ebd4ed60d799ffbda1b30023 -> 1dfc4e18a67da64c518b9518e62ac4fe
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:scripting/monoscript/fileName/CFX_SpawnSystemEditor.cs: 961dd98ee368d293720faa5e6180c55f -> 8ef4ed7f7ca5c207cc3108bdafbacf7e
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:scripting/monoscript/fileName/CFX_Demo_RotateCamera.cs: 4093981287d7c6100e9fe689f7c9411e -> 1b6c7bbcbc0a01f776aafda62612b729
+  custom:scripting/monoscript/fileName/WFX_Demo_DeleteAfterDelay.cs: feab4ecb418cb313790125ab2f3e742b -> a8456c85d9636ec3b34432ce15771790
+  custom:scripting/monoscript/fileName/WFX_BulletHoleDecal.cs: f491e9aef5a5f2c367f064bcc6c862c0 -> b2a50a5c52cc82fa50f26101cc423417
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:scripting/monoscript/fileName/WFX_Demo_Wall.cs: 45876beed7f29c422b20e2de2113200e -> ebe32a1844666a18dc6e88646d62cdf3
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:scripting/monoscript/fileName/CFX_AutoStopLoopedEffect.cs: 62ac9e0b32d469c4b76269bc70152315 -> 0a1116784d96426e30ae544ef0d48111
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:scripting/monoscript/fileName/CFX_LightIntensityFade.cs: 2c0ab7605cddfd3eb20461d360619486 -> cdc33b13e94fac5095d515fc63c5bc75
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/WFX_Demo.cs: 9c911057018d0fe43728eb8d68b9a4e0 -> 16a8c51f1dc0063656a39d0352fd910f
+  custom:scripting/monoscript/fileName/CFX_Demo_Translate.cs: de26e2b5a3c6cbaa3cca0e0576709ad7 -> c85e572516e08f311291871f16fd4e55
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/CFX_AutoDestructShuriken.cs: 36bf2f3a00d4f92e7516bb0c5ac5f44d -> 7d622660cad3b608810f352fdbc5d485
+  custom:scripting/monoscript/fileName/WFX_Demo_New.cs: 9069327d8d485dc6e94b0abfa67c4280 -> 225d44912cd20a0c8b007d7146330c83
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Thread 0x16dc33000 may have been prematurely finalized
+- Loaded All Assemblies, in  0.338 seconds
+Refreshing native plugins compatible for Editor in 0.82 ms, found 2 plugins.
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.683 seconds
+Domain Reload Profiling: 1022ms
+	BeginReloadAssembly (104ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (3ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (41ms)
+	RebuildCommonClasses (29ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (15ms)
+	LoadAllAssembliesAndSetupDomain (182ms)
+		LoadAssemblies (189ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (30ms)
+			TypeCache.Refresh (18ms)
+				TypeCache.ScanAssembly (1ms)
+			ScanForSourceGeneratedMonoScriptInfo (7ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (684ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (224ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (2ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (31ms)
+			ProcessInitializeOnLoadAttributes (176ms)
+			ProcessInitializeOnLoadMethodAttributes (10ms)
+			AfterProcessingInitializeOnLoad (2ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (2ms)
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 0.82 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3164 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 21 unused Assets / (30.0 KB). Loaded Objects now: 3857.
+Memory consumption went from 345.0 MB to 345.0 MB.
+Total: 4.601125 ms (FindLiveObjects: 1.177458 ms CreateObjectMapping: 0.109250 ms MarkObjects: 3.246459 ms  DeleteObjects: 0.065959 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:scripting/monoscript/fileName/CFX_SpawnSystem.cs: 25a5e89f630a68b5be2dcafea5156cb7 -> da90548e33a5ac9767c2ab325529961a
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:scripting/monoscript/fileName/GrenadeCotroller.cs: 875e0b54e8b2b9de0d6d251a295ebd69 -> 
+  custom:scripting/monoscript/fileName/CFXEasyEditor.cs: f5aa4f7dc0fb6cc1f062891d3d23ad3a -> 975509eb43d0b0d90d19d984ce47d25d
+  custom:scripting/monoscript/fileName/WFX_Demo_RandomDir.cs: 5adb98288eccda10fe06003139c10717 -> 83412d56870e7b7abf13729c1e4f5956
+  custom:scripting/monoscript/fileName/CFX_Demo_RandomDir.cs: ac40046481e5c4f71b9d19df2c090925 -> 06fce4b0d835d8793ccf8307925e464f
+  custom:scripting/monoscript/fileName/GhoulZombieController.cs: c2cb6201a8a4f30eeb9dbe3d83ffae65 -> 
+  custom:scripting/monoscript/fileName/WFX_LightFlicker.cs: 8611c610ebd4ed60d799ffbda1b30023 -> 1dfc4e18a67da64c518b9518e62ac4fe
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:scripting/monoscript/fileName/CFX_SpawnSystemEditor.cs: 961dd98ee368d293720faa5e6180c55f -> 8ef4ed7f7ca5c207cc3108bdafbacf7e
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:scripting/monoscript/fileName/CFX_Demo_RotateCamera.cs: 4093981287d7c6100e9fe689f7c9411e -> 1b6c7bbcbc0a01f776aafda62612b729
+  custom:scripting/monoscript/fileName/WFX_Demo_DeleteAfterDelay.cs: feab4ecb418cb313790125ab2f3e742b -> a8456c85d9636ec3b34432ce15771790
+  custom:scripting/monoscript/fileName/WFX_BulletHoleDecal.cs: f491e9aef5a5f2c367f064bcc6c862c0 -> b2a50a5c52cc82fa50f26101cc423417
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:scripting/monoscript/fileName/WFX_Demo_Wall.cs: 45876beed7f29c422b20e2de2113200e -> ebe32a1844666a18dc6e88646d62cdf3
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:scripting/monoscript/fileName/CFX_AutoStopLoopedEffect.cs: 62ac9e0b32d469c4b76269bc70152315 -> 0a1116784d96426e30ae544ef0d48111
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:scripting/monoscript/fileName/CFX_LightIntensityFade.cs: 2c0ab7605cddfd3eb20461d360619486 -> cdc33b13e94fac5095d515fc63c5bc75
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/WFX_Demo.cs: 9c911057018d0fe43728eb8d68b9a4e0 -> 16a8c51f1dc0063656a39d0352fd910f
+  custom:scripting/monoscript/fileName/CFX_Demo_Translate.cs: de26e2b5a3c6cbaa3cca0e0576709ad7 -> c85e572516e08f311291871f16fd4e55
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/CFX_AutoDestructShuriken.cs: 36bf2f3a00d4f92e7516bb0c5ac5f44d -> 7d622660cad3b608810f352fdbc5d485
+  custom:scripting/monoscript/fileName/WFX_Demo_New.cs: 9069327d8d485dc6e94b0abfa67c4280 -> 225d44912cd20a0c8b007d7146330c83
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Thread 0x16dc33000 may have been prematurely finalized
+- Loaded All Assemblies, in  0.344 seconds
+Refreshing native plugins compatible for Editor in 0.84 ms, found 2 plugins.
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.685 seconds
+Domain Reload Profiling: 1029ms
+	BeginReloadAssembly (116ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (3ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (52ms)
+	RebuildCommonClasses (23ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (31ms)
+	LoadAllAssembliesAndSetupDomain (165ms)
+		LoadAssemblies (174ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (26ms)
+			TypeCache.Refresh (14ms)
+				TypeCache.ScanAssembly (1ms)
+			ScanForSourceGeneratedMonoScriptInfo (8ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (685ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (230ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (2ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (32ms)
+			ProcessInitializeOnLoadAttributes (181ms)
+			ProcessInitializeOnLoadMethodAttributes (10ms)
+			AfterProcessingInitializeOnLoad (2ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (2ms)
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 0.91 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3164 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 21 unused Assets / (29.9 KB). Loaded Objects now: 3860.
+Memory consumption went from 349.6 MB to 349.6 MB.
+Total: 5.862250 ms (FindLiveObjects: 0.931375 ms CreateObjectMapping: 0.040000 ms MarkObjects: 4.829750 ms  DeleteObjects: 0.060750 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:scripting/monoscript/fileName/CFX_SpawnSystem.cs: 25a5e89f630a68b5be2dcafea5156cb7 -> da90548e33a5ac9767c2ab325529961a
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:scripting/monoscript/fileName/GrenadeCotroller.cs: 875e0b54e8b2b9de0d6d251a295ebd69 -> 
+  custom:scripting/monoscript/fileName/CFXEasyEditor.cs: f5aa4f7dc0fb6cc1f062891d3d23ad3a -> 975509eb43d0b0d90d19d984ce47d25d
+  custom:scripting/monoscript/fileName/WFX_Demo_RandomDir.cs: 5adb98288eccda10fe06003139c10717 -> 83412d56870e7b7abf13729c1e4f5956
+  custom:scripting/monoscript/fileName/CFX_Demo_RandomDir.cs: ac40046481e5c4f71b9d19df2c090925 -> 06fce4b0d835d8793ccf8307925e464f
+  custom:scripting/monoscript/fileName/GhoulZombieController.cs: c2cb6201a8a4f30eeb9dbe3d83ffae65 -> 
+  custom:scripting/monoscript/fileName/WFX_LightFlicker.cs: 8611c610ebd4ed60d799ffbda1b30023 -> 1dfc4e18a67da64c518b9518e62ac4fe
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:scripting/monoscript/fileName/CFX_SpawnSystemEditor.cs: 961dd98ee368d293720faa5e6180c55f -> 8ef4ed7f7ca5c207cc3108bdafbacf7e
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:scripting/monoscript/fileName/CFX_Demo_RotateCamera.cs: 4093981287d7c6100e9fe689f7c9411e -> 1b6c7bbcbc0a01f776aafda62612b729
+  custom:scripting/monoscript/fileName/WFX_Demo_DeleteAfterDelay.cs: feab4ecb418cb313790125ab2f3e742b -> a8456c85d9636ec3b34432ce15771790
+  custom:scripting/monoscript/fileName/WFX_BulletHoleDecal.cs: f491e9aef5a5f2c367f064bcc6c862c0 -> b2a50a5c52cc82fa50f26101cc423417
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:scripting/monoscript/fileName/WFX_Demo_Wall.cs: 45876beed7f29c422b20e2de2113200e -> ebe32a1844666a18dc6e88646d62cdf3
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:scripting/monoscript/fileName/CFX_AutoStopLoopedEffect.cs: 62ac9e0b32d469c4b76269bc70152315 -> 0a1116784d96426e30ae544ef0d48111
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:scripting/monoscript/fileName/CFX_LightIntensityFade.cs: 2c0ab7605cddfd3eb20461d360619486 -> cdc33b13e94fac5095d515fc63c5bc75
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/WFX_Demo.cs: 9c911057018d0fe43728eb8d68b9a4e0 -> 16a8c51f1dc0063656a39d0352fd910f
+  custom:scripting/monoscript/fileName/CFX_Demo_Translate.cs: de26e2b5a3c6cbaa3cca0e0576709ad7 -> c85e572516e08f311291871f16fd4e55
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/CFX_AutoDestructShuriken.cs: 36bf2f3a00d4f92e7516bb0c5ac5f44d -> 7d622660cad3b608810f352fdbc5d485
+  custom:scripting/monoscript/fileName/WFX_Demo_New.cs: 9069327d8d485dc6e94b0abfa67c4280 -> 225d44912cd20a0c8b007d7146330c83
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Thread 0x16dc33000 may have been prematurely finalized
+- Loaded All Assemblies, in  0.346 seconds
+Refreshing native plugins compatible for Editor in 0.86 ms, found 2 plugins.
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.702 seconds
+Domain Reload Profiling: 1048ms
+	BeginReloadAssembly (115ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (40ms)
+	RebuildCommonClasses (23ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (18ms)
+	LoadAllAssembliesAndSetupDomain (181ms)
+		LoadAssemblies (189ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (29ms)
+			TypeCache.Refresh (14ms)
+				TypeCache.ScanAssembly (1ms)
+			ScanForSourceGeneratedMonoScriptInfo (10ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (702ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (242ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (4ms)
+			SetLoadedEditorAssemblies (2ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (38ms)
+			ProcessInitializeOnLoadAttributes (186ms)
+			ProcessInitializeOnLoadMethodAttributes (10ms)
+			AfterProcessingInitializeOnLoad (2ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (2ms)
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 0.84 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3164 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 21 unused Assets / (29.9 KB). Loaded Objects now: 3863.
+Memory consumption went from 354.2 MB to 354.1 MB.
+Total: 2.262542 ms (FindLiveObjects: 0.121709 ms CreateObjectMapping: 0.040625 ms MarkObjects: 2.053291 ms  DeleteObjects: 0.046333 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:scripting/monoscript/fileName/CFX_SpawnSystem.cs: 25a5e89f630a68b5be2dcafea5156cb7 -> da90548e33a5ac9767c2ab325529961a
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:scripting/monoscript/fileName/GrenadeCotroller.cs: 875e0b54e8b2b9de0d6d251a295ebd69 -> 
+  custom:scripting/monoscript/fileName/CFXEasyEditor.cs: f5aa4f7dc0fb6cc1f062891d3d23ad3a -> 975509eb43d0b0d90d19d984ce47d25d
+  custom:scripting/monoscript/fileName/WFX_Demo_RandomDir.cs: 5adb98288eccda10fe06003139c10717 -> 83412d56870e7b7abf13729c1e4f5956
+  custom:scripting/monoscript/fileName/CFX_Demo_RandomDir.cs: ac40046481e5c4f71b9d19df2c090925 -> 06fce4b0d835d8793ccf8307925e464f
+  custom:scripting/monoscript/fileName/GhoulZombieController.cs: c2cb6201a8a4f30eeb9dbe3d83ffae65 -> 
+  custom:scripting/monoscript/fileName/WFX_LightFlicker.cs: 8611c610ebd4ed60d799ffbda1b30023 -> 1dfc4e18a67da64c518b9518e62ac4fe
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:scripting/monoscript/fileName/CFX_SpawnSystemEditor.cs: 961dd98ee368d293720faa5e6180c55f -> 8ef4ed7f7ca5c207cc3108bdafbacf7e
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:scripting/monoscript/fileName/CFX_Demo_RotateCamera.cs: 4093981287d7c6100e9fe689f7c9411e -> 1b6c7bbcbc0a01f776aafda62612b729
+  custom:scripting/monoscript/fileName/WFX_Demo_DeleteAfterDelay.cs: feab4ecb418cb313790125ab2f3e742b -> a8456c85d9636ec3b34432ce15771790
+  custom:scripting/monoscript/fileName/WFX_BulletHoleDecal.cs: f491e9aef5a5f2c367f064bcc6c862c0 -> b2a50a5c52cc82fa50f26101cc423417
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:scripting/monoscript/fileName/WFX_Demo_Wall.cs: 45876beed7f29c422b20e2de2113200e -> ebe32a1844666a18dc6e88646d62cdf3
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:scripting/monoscript/fileName/CFX_AutoStopLoopedEffect.cs: 62ac9e0b32d469c4b76269bc70152315 -> 0a1116784d96426e30ae544ef0d48111
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:scripting/monoscript/fileName/CFX_LightIntensityFade.cs: 2c0ab7605cddfd3eb20461d360619486 -> cdc33b13e94fac5095d515fc63c5bc75
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/WFX_Demo.cs: 9c911057018d0fe43728eb8d68b9a4e0 -> 16a8c51f1dc0063656a39d0352fd910f
+  custom:scripting/monoscript/fileName/CFX_Demo_Translate.cs: de26e2b5a3c6cbaa3cca0e0576709ad7 -> c85e572516e08f311291871f16fd4e55
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/CFX_AutoDestructShuriken.cs: 36bf2f3a00d4f92e7516bb0c5ac5f44d -> 7d622660cad3b608810f352fdbc5d485
+  custom:scripting/monoscript/fileName/WFX_Demo_New.cs: 9069327d8d485dc6e94b0abfa67c4280 -> 225d44912cd20a0c8b007d7146330c83
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Thread 0x16dc33000 may have been prematurely finalized
+- Loaded All Assemblies, in  0.325 seconds
+Refreshing native plugins compatible for Editor in 1.96 ms, found 2 plugins.
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.726 seconds
+Domain Reload Profiling: 1057ms
+	BeginReloadAssembly (107ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (3ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (43ms)
+	RebuildCommonClasses (23ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (14ms)
+	LoadAllAssembliesAndSetupDomain (178ms)
+		LoadAssemblies (172ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (34ms)
+			TypeCache.Refresh (16ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (15ms)
+	FinalizeReload (726ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (249ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (37ms)
+			ProcessInitializeOnLoadAttributes (193ms)
+			ProcessInitializeOnLoadMethodAttributes (11ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (3ms)
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 1.00 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3164 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 21 unused Assets / (29.9 KB). Loaded Objects now: 3866.
+Memory consumption went from 358.7 MB to 358.7 MB.
+Total: 3.073083 ms (FindLiveObjects: 0.148833 ms CreateObjectMapping: 0.040500 ms MarkObjects: 2.824583 ms  DeleteObjects: 0.058375 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:scripting/monoscript/fileName/CFX_SpawnSystem.cs: 25a5e89f630a68b5be2dcafea5156cb7 -> da90548e33a5ac9767c2ab325529961a
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:scripting/monoscript/fileName/GrenadeCotroller.cs: 875e0b54e8b2b9de0d6d251a295ebd69 -> 
+  custom:scripting/monoscript/fileName/CFXEasyEditor.cs: f5aa4f7dc0fb6cc1f062891d3d23ad3a -> 975509eb43d0b0d90d19d984ce47d25d
+  custom:scripting/monoscript/fileName/WFX_Demo_RandomDir.cs: 5adb98288eccda10fe06003139c10717 -> 83412d56870e7b7abf13729c1e4f5956
+  custom:scripting/monoscript/fileName/CFX_Demo_RandomDir.cs: ac40046481e5c4f71b9d19df2c090925 -> 06fce4b0d835d8793ccf8307925e464f
+  custom:scripting/monoscript/fileName/GhoulZombieController.cs: c2cb6201a8a4f30eeb9dbe3d83ffae65 -> 
+  custom:scripting/monoscript/fileName/WFX_LightFlicker.cs: 8611c610ebd4ed60d799ffbda1b30023 -> 1dfc4e18a67da64c518b9518e62ac4fe
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:scripting/monoscript/fileName/CFX_SpawnSystemEditor.cs: 961dd98ee368d293720faa5e6180c55f -> 8ef4ed7f7ca5c207cc3108bdafbacf7e
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:scripting/monoscript/fileName/CFX_Demo_RotateCamera.cs: 4093981287d7c6100e9fe689f7c9411e -> 1b6c7bbcbc0a01f776aafda62612b729
+  custom:scripting/monoscript/fileName/WFX_Demo_DeleteAfterDelay.cs: feab4ecb418cb313790125ab2f3e742b -> a8456c85d9636ec3b34432ce15771790
+  custom:scripting/monoscript/fileName/WFX_BulletHoleDecal.cs: f491e9aef5a5f2c367f064bcc6c862c0 -> b2a50a5c52cc82fa50f26101cc423417
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:scripting/monoscript/fileName/WFX_Demo_Wall.cs: 45876beed7f29c422b20e2de2113200e -> ebe32a1844666a18dc6e88646d62cdf3
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:scripting/monoscript/fileName/CFX_AutoStopLoopedEffect.cs: 62ac9e0b32d469c4b76269bc70152315 -> 0a1116784d96426e30ae544ef0d48111
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:scripting/monoscript/fileName/CFX_LightIntensityFade.cs: 2c0ab7605cddfd3eb20461d360619486 -> cdc33b13e94fac5095d515fc63c5bc75
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/WFX_Demo.cs: 9c911057018d0fe43728eb8d68b9a4e0 -> 16a8c51f1dc0063656a39d0352fd910f
+  custom:scripting/monoscript/fileName/CFX_Demo_Translate.cs: de26e2b5a3c6cbaa3cca0e0576709ad7 -> c85e572516e08f311291871f16fd4e55
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/CFX_AutoDestructShuriken.cs: 36bf2f3a00d4f92e7516bb0c5ac5f44d -> 7d622660cad3b608810f352fdbc5d485
+  custom:scripting/monoscript/fileName/WFX_Demo_New.cs: 9069327d8d485dc6e94b0abfa67c4280 -> 225d44912cd20a0c8b007d7146330c83
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Thread 0x16dc33000 may have been prematurely finalized
+- Loaded All Assemblies, in  0.285 seconds
+Refreshing native plugins compatible for Editor in 0.85 ms, found 2 plugins.
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.675 seconds
+Domain Reload Profiling: 960ms
+	BeginReloadAssembly (106ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (3ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (42ms)
+	RebuildCommonClasses (24ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (14ms)
+	LoadAllAssembliesAndSetupDomain (132ms)
+		LoadAssemblies (155ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (13ms)
+			TypeCache.Refresh (8ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (675ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (233ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (2ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (33ms)
+			ProcessInitializeOnLoadAttributes (182ms)
+			ProcessInitializeOnLoadMethodAttributes (10ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (3ms)
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 0.89 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3164 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 21 unused Assets / (29.9 KB). Loaded Objects now: 3869.
+Memory consumption went from 363.3 MB to 363.3 MB.
+Total: 2.705500 ms (FindLiveObjects: 0.141750 ms CreateObjectMapping: 0.042458 ms MarkObjects: 2.479667 ms  DeleteObjects: 0.040833 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:scripting/monoscript/fileName/CFX_SpawnSystem.cs: 25a5e89f630a68b5be2dcafea5156cb7 -> da90548e33a5ac9767c2ab325529961a
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:scripting/monoscript/fileName/GrenadeCotroller.cs: 875e0b54e8b2b9de0d6d251a295ebd69 -> 
+  custom:scripting/monoscript/fileName/CFXEasyEditor.cs: f5aa4f7dc0fb6cc1f062891d3d23ad3a -> 975509eb43d0b0d90d19d984ce47d25d
+  custom:scripting/monoscript/fileName/WFX_Demo_RandomDir.cs: 5adb98288eccda10fe06003139c10717 -> 83412d56870e7b7abf13729c1e4f5956
+  custom:scripting/monoscript/fileName/CFX_Demo_RandomDir.cs: ac40046481e5c4f71b9d19df2c090925 -> 06fce4b0d835d8793ccf8307925e464f
+  custom:scripting/monoscript/fileName/GhoulZombieController.cs: c2cb6201a8a4f30eeb9dbe3d83ffae65 -> 
+  custom:scripting/monoscript/fileName/WFX_LightFlicker.cs: 8611c610ebd4ed60d799ffbda1b30023 -> 1dfc4e18a67da64c518b9518e62ac4fe
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:scripting/monoscript/fileName/CFX_SpawnSystemEditor.cs: 961dd98ee368d293720faa5e6180c55f -> 8ef4ed7f7ca5c207cc3108bdafbacf7e
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:scripting/monoscript/fileName/CFX_Demo_RotateCamera.cs: 4093981287d7c6100e9fe689f7c9411e -> 1b6c7bbcbc0a01f776aafda62612b729
+  custom:scripting/monoscript/fileName/WFX_Demo_DeleteAfterDelay.cs: feab4ecb418cb313790125ab2f3e742b -> a8456c85d9636ec3b34432ce15771790
+  custom:scripting/monoscript/fileName/WFX_BulletHoleDecal.cs: f491e9aef5a5f2c367f064bcc6c862c0 -> b2a50a5c52cc82fa50f26101cc423417
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:scripting/monoscript/fileName/WFX_Demo_Wall.cs: 45876beed7f29c422b20e2de2113200e -> ebe32a1844666a18dc6e88646d62cdf3
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:scripting/monoscript/fileName/CFX_AutoStopLoopedEffect.cs: 62ac9e0b32d469c4b76269bc70152315 -> 0a1116784d96426e30ae544ef0d48111
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:scripting/monoscript/fileName/CFX_LightIntensityFade.cs: 2c0ab7605cddfd3eb20461d360619486 -> cdc33b13e94fac5095d515fc63c5bc75
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/WFX_Demo.cs: 9c911057018d0fe43728eb8d68b9a4e0 -> 16a8c51f1dc0063656a39d0352fd910f
+  custom:scripting/monoscript/fileName/CFX_Demo_Translate.cs: de26e2b5a3c6cbaa3cca0e0576709ad7 -> c85e572516e08f311291871f16fd4e55
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/CFX_AutoDestructShuriken.cs: 36bf2f3a00d4f92e7516bb0c5ac5f44d -> 7d622660cad3b608810f352fdbc5d485
+  custom:scripting/monoscript/fileName/WFX_Demo_New.cs: 9069327d8d485dc6e94b0abfa67c4280 -> 225d44912cd20a0c8b007d7146330c83
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Thread 0x16dc33000 may have been prematurely finalized
+- Loaded All Assemblies, in  0.360 seconds
+Refreshing native plugins compatible for Editor in 0.83 ms, found 2 plugins.
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.660 seconds
+Domain Reload Profiling: 1020ms
+	BeginReloadAssembly (131ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (3ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (63ms)
+	RebuildCommonClasses (30ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (17ms)
+	LoadAllAssembliesAndSetupDomain (173ms)
+		LoadAssemblies (185ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (28ms)
+			TypeCache.Refresh (19ms)
+				TypeCache.ScanAssembly (1ms)
+			ScanForSourceGeneratedMonoScriptInfo (5ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (660ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (231ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (4ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (32ms)
+			ProcessInitializeOnLoadAttributes (181ms)
+			ProcessInitializeOnLoadMethodAttributes (10ms)
+			AfterProcessingInitializeOnLoad (2ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (2ms)
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 0.85 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3164 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 21 unused Assets / (30.0 KB). Loaded Objects now: 3872.
+Memory consumption went from 367.9 MB to 367.8 MB.
+Total: 2.285625 ms (FindLiveObjects: 0.128916 ms CreateObjectMapping: 0.040583 ms MarkObjects: 2.076584 ms  DeleteObjects: 0.038833 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:scripting/monoscript/fileName/CFX_SpawnSystem.cs: 25a5e89f630a68b5be2dcafea5156cb7 -> da90548e33a5ac9767c2ab325529961a
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:scripting/monoscript/fileName/GrenadeCotroller.cs: 875e0b54e8b2b9de0d6d251a295ebd69 -> 
+  custom:scripting/monoscript/fileName/CFXEasyEditor.cs: f5aa4f7dc0fb6cc1f062891d3d23ad3a -> 975509eb43d0b0d90d19d984ce47d25d
+  custom:scripting/monoscript/fileName/WFX_Demo_RandomDir.cs: 5adb98288eccda10fe06003139c10717 -> 83412d56870e7b7abf13729c1e4f5956
+  custom:scripting/monoscript/fileName/CFX_Demo_RandomDir.cs: ac40046481e5c4f71b9d19df2c090925 -> 06fce4b0d835d8793ccf8307925e464f
+  custom:scripting/monoscript/fileName/GhoulZombieController.cs: c2cb6201a8a4f30eeb9dbe3d83ffae65 -> 
+  custom:scripting/monoscript/fileName/WFX_LightFlicker.cs: 8611c610ebd4ed60d799ffbda1b30023 -> 1dfc4e18a67da64c518b9518e62ac4fe
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:scripting/monoscript/fileName/CFX_SpawnSystemEditor.cs: 961dd98ee368d293720faa5e6180c55f -> 8ef4ed7f7ca5c207cc3108bdafbacf7e
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:scripting/monoscript/fileName/CFX_Demo_RotateCamera.cs: 4093981287d7c6100e9fe689f7c9411e -> 1b6c7bbcbc0a01f776aafda62612b729
+  custom:scripting/monoscript/fileName/WFX_Demo_DeleteAfterDelay.cs: feab4ecb418cb313790125ab2f3e742b -> a8456c85d9636ec3b34432ce15771790
+  custom:scripting/monoscript/fileName/WFX_BulletHoleDecal.cs: f491e9aef5a5f2c367f064bcc6c862c0 -> b2a50a5c52cc82fa50f26101cc423417
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:scripting/monoscript/fileName/WFX_Demo_Wall.cs: 45876beed7f29c422b20e2de2113200e -> ebe32a1844666a18dc6e88646d62cdf3
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:scripting/monoscript/fileName/CFX_AutoStopLoopedEffect.cs: 62ac9e0b32d469c4b76269bc70152315 -> 0a1116784d96426e30ae544ef0d48111
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:scripting/monoscript/fileName/CFX_LightIntensityFade.cs: 2c0ab7605cddfd3eb20461d360619486 -> cdc33b13e94fac5095d515fc63c5bc75
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/WFX_Demo.cs: 9c911057018d0fe43728eb8d68b9a4e0 -> 16a8c51f1dc0063656a39d0352fd910f
+  custom:scripting/monoscript/fileName/CFX_Demo_Translate.cs: de26e2b5a3c6cbaa3cca0e0576709ad7 -> c85e572516e08f311291871f16fd4e55
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/CFX_AutoDestructShuriken.cs: 36bf2f3a00d4f92e7516bb0c5ac5f44d -> 7d622660cad3b608810f352fdbc5d485
+  custom:scripting/monoscript/fileName/WFX_Demo_New.cs: 9069327d8d485dc6e94b0abfa67c4280 -> 225d44912cd20a0c8b007d7146330c83
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Thread 0x16dc33000 may have been prematurely finalized
+- Loaded All Assemblies, in  0.320 seconds
+Refreshing native plugins compatible for Editor in 0.85 ms, found 2 plugins.
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.658 seconds
+Domain Reload Profiling: 978ms
+	BeginReloadAssembly (117ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (43ms)
+	RebuildCommonClasses (25ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (26ms)
+	LoadAllAssembliesAndSetupDomain (143ms)
+		LoadAssemblies (169ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (18ms)
+			TypeCache.Refresh (8ms)
+				TypeCache.ScanAssembly (1ms)
+			ScanForSourceGeneratedMonoScriptInfo (5ms)
+			ResolveRequiredComponents (3ms)
+	FinalizeReload (658ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (239ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (4ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (34ms)
+			ProcessInitializeOnLoadAttributes (188ms)
+			ProcessInitializeOnLoadMethodAttributes (10ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (4ms)
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 0.85 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3164 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 21 unused Assets / (29.9 KB). Loaded Objects now: 3875.
+Memory consumption went from 372.4 MB to 372.4 MB.
+Total: 2.266750 ms (FindLiveObjects: 0.128375 ms CreateObjectMapping: 0.043250 ms MarkObjects: 2.048833 ms  DeleteObjects: 0.045583 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:scripting/monoscript/fileName/CFX_SpawnSystem.cs: 25a5e89f630a68b5be2dcafea5156cb7 -> da90548e33a5ac9767c2ab325529961a
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:scripting/monoscript/fileName/GrenadeCotroller.cs: 875e0b54e8b2b9de0d6d251a295ebd69 -> 
+  custom:scripting/monoscript/fileName/CFXEasyEditor.cs: f5aa4f7dc0fb6cc1f062891d3d23ad3a -> 975509eb43d0b0d90d19d984ce47d25d
+  custom:scripting/monoscript/fileName/WFX_Demo_RandomDir.cs: 5adb98288eccda10fe06003139c10717 -> 83412d56870e7b7abf13729c1e4f5956
+  custom:scripting/monoscript/fileName/CFX_Demo_RandomDir.cs: ac40046481e5c4f71b9d19df2c090925 -> 06fce4b0d835d8793ccf8307925e464f
+  custom:scripting/monoscript/fileName/GhoulZombieController.cs: c2cb6201a8a4f30eeb9dbe3d83ffae65 -> 
+  custom:scripting/monoscript/fileName/WFX_LightFlicker.cs: 8611c610ebd4ed60d799ffbda1b30023 -> 1dfc4e18a67da64c518b9518e62ac4fe
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:scripting/monoscript/fileName/CFX_SpawnSystemEditor.cs: 961dd98ee368d293720faa5e6180c55f -> 8ef4ed7f7ca5c207cc3108bdafbacf7e
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:scripting/monoscript/fileName/CFX_Demo_RotateCamera.cs: 4093981287d7c6100e9fe689f7c9411e -> 1b6c7bbcbc0a01f776aafda62612b729
+  custom:scripting/monoscript/fileName/WFX_Demo_DeleteAfterDelay.cs: feab4ecb418cb313790125ab2f3e742b -> a8456c85d9636ec3b34432ce15771790
+  custom:scripting/monoscript/fileName/WFX_BulletHoleDecal.cs: f491e9aef5a5f2c367f064bcc6c862c0 -> b2a50a5c52cc82fa50f26101cc423417
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:scripting/monoscript/fileName/WFX_Demo_Wall.cs: 45876beed7f29c422b20e2de2113200e -> ebe32a1844666a18dc6e88646d62cdf3
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:scripting/monoscript/fileName/CFX_AutoStopLoopedEffect.cs: 62ac9e0b32d469c4b76269bc70152315 -> 0a1116784d96426e30ae544ef0d48111
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:scripting/monoscript/fileName/CFX_LightIntensityFade.cs: 2c0ab7605cddfd3eb20461d360619486 -> cdc33b13e94fac5095d515fc63c5bc75
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/WFX_Demo.cs: 9c911057018d0fe43728eb8d68b9a4e0 -> 16a8c51f1dc0063656a39d0352fd910f
+  custom:scripting/monoscript/fileName/CFX_Demo_Translate.cs: de26e2b5a3c6cbaa3cca0e0576709ad7 -> c85e572516e08f311291871f16fd4e55
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/CFX_AutoDestructShuriken.cs: 36bf2f3a00d4f92e7516bb0c5ac5f44d -> 7d622660cad3b608810f352fdbc5d485
+  custom:scripting/monoscript/fileName/WFX_Demo_New.cs: 9069327d8d485dc6e94b0abfa67c4280 -> 225d44912cd20a0c8b007d7146330c83
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Thread 0x16dc33000 may have been prematurely finalized
+- Loaded All Assemblies, in  0.347 seconds
+Refreshing native plugins compatible for Editor in 0.78 ms, found 2 plugins.
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.691 seconds
+Domain Reload Profiling: 1039ms
+	BeginReloadAssembly (114ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (3ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (46ms)
+	RebuildCommonClasses (25ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (22ms)
+	LoadAllAssembliesAndSetupDomain (177ms)
+		LoadAssemblies (187ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (30ms)
+			TypeCache.Refresh (20ms)
+				TypeCache.ScanAssembly (1ms)
+			ScanForSourceGeneratedMonoScriptInfo (5ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (691ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (248ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (4ms)
+			SetLoadedEditorAssemblies (2ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (33ms)
+			ProcessInitializeOnLoadAttributes (195ms)
+			ProcessInitializeOnLoadMethodAttributes (12ms)
+			AfterProcessingInitializeOnLoad (2ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (3ms)
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 1.13 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3164 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 21 unused Assets / (29.9 KB). Loaded Objects now: 3878.
+Memory consumption went from 377.0 MB to 377.0 MB.
+Total: 2.277625 ms (FindLiveObjects: 0.131667 ms CreateObjectMapping: 0.044292 ms MarkObjects: 2.061958 ms  DeleteObjects: 0.038958 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:scripting/monoscript/fileName/CFX_SpawnSystem.cs: 25a5e89f630a68b5be2dcafea5156cb7 -> da90548e33a5ac9767c2ab325529961a
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:scripting/monoscript/fileName/GrenadeCotroller.cs: 875e0b54e8b2b9de0d6d251a295ebd69 -> 
+  custom:scripting/monoscript/fileName/CFXEasyEditor.cs: f5aa4f7dc0fb6cc1f062891d3d23ad3a -> 975509eb43d0b0d90d19d984ce47d25d
+  custom:scripting/monoscript/fileName/WFX_Demo_RandomDir.cs: 5adb98288eccda10fe06003139c10717 -> 83412d56870e7b7abf13729c1e4f5956
+  custom:scripting/monoscript/fileName/CFX_Demo_RandomDir.cs: ac40046481e5c4f71b9d19df2c090925 -> 06fce4b0d835d8793ccf8307925e464f
+  custom:scripting/monoscript/fileName/GhoulZombieController.cs: c2cb6201a8a4f30eeb9dbe3d83ffae65 -> 
+  custom:scripting/monoscript/fileName/WFX_LightFlicker.cs: 8611c610ebd4ed60d799ffbda1b30023 -> 1dfc4e18a67da64c518b9518e62ac4fe
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:scripting/monoscript/fileName/CFX_SpawnSystemEditor.cs: 961dd98ee368d293720faa5e6180c55f -> 8ef4ed7f7ca5c207cc3108bdafbacf7e
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:scripting/monoscript/fileName/CFX_Demo_RotateCamera.cs: 4093981287d7c6100e9fe689f7c9411e -> 1b6c7bbcbc0a01f776aafda62612b729
+  custom:scripting/monoscript/fileName/WFX_Demo_DeleteAfterDelay.cs: feab4ecb418cb313790125ab2f3e742b -> a8456c85d9636ec3b34432ce15771790
+  custom:scripting/monoscript/fileName/WFX_BulletHoleDecal.cs: f491e9aef5a5f2c367f064bcc6c862c0 -> b2a50a5c52cc82fa50f26101cc423417
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:scripting/monoscript/fileName/WFX_Demo_Wall.cs: 45876beed7f29c422b20e2de2113200e -> ebe32a1844666a18dc6e88646d62cdf3
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:scripting/monoscript/fileName/CFX_AutoStopLoopedEffect.cs: 62ac9e0b32d469c4b76269bc70152315 -> 0a1116784d96426e30ae544ef0d48111
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:scripting/monoscript/fileName/CFX_LightIntensityFade.cs: 2c0ab7605cddfd3eb20461d360619486 -> cdc33b13e94fac5095d515fc63c5bc75
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/WFX_Demo.cs: 9c911057018d0fe43728eb8d68b9a4e0 -> 16a8c51f1dc0063656a39d0352fd910f
+  custom:scripting/monoscript/fileName/CFX_Demo_Translate.cs: de26e2b5a3c6cbaa3cca0e0576709ad7 -> c85e572516e08f311291871f16fd4e55
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/CFX_AutoDestructShuriken.cs: 36bf2f3a00d4f92e7516bb0c5ac5f44d -> 7d622660cad3b608810f352fdbc5d485
+  custom:scripting/monoscript/fileName/WFX_Demo_New.cs: 9069327d8d485dc6e94b0abfa67c4280 -> 225d44912cd20a0c8b007d7146330c83
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Thread 0x16dc33000 may have been prematurely finalized
+- Loaded All Assemblies, in  0.267 seconds
+Refreshing native plugins compatible for Editor in 0.84 ms, found 2 plugins.
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.522 seconds
+Domain Reload Profiling: 790ms
+	BeginReloadAssembly (90ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (30ms)
+	RebuildCommonClasses (23ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (13ms)
+	LoadAllAssembliesAndSetupDomain (133ms)
+		LoadAssemblies (152ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (14ms)
+			TypeCache.Refresh (8ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (5ms)
+	FinalizeReload (522ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (265ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (4ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (55ms)
+			ProcessInitializeOnLoadAttributes (191ms)
+			ProcessInitializeOnLoadMethodAttributes (11ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (3ms)
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 0.82 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3164 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 21 unused Assets / (29.9 KB). Loaded Objects now: 3881.
+Memory consumption went from 381.6 MB to 381.5 MB.
+Total: 2.578708 ms (FindLiveObjects: 0.266125 ms CreateObjectMapping: 0.071916 ms MarkObjects: 2.198667 ms  DeleteObjects: 0.041791 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:scripting/monoscript/fileName/CFX_SpawnSystem.cs: 25a5e89f630a68b5be2dcafea5156cb7 -> da90548e33a5ac9767c2ab325529961a
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:scripting/monoscript/fileName/GrenadeCotroller.cs: 875e0b54e8b2b9de0d6d251a295ebd69 -> 
+  custom:scripting/monoscript/fileName/CFXEasyEditor.cs: f5aa4f7dc0fb6cc1f062891d3d23ad3a -> 975509eb43d0b0d90d19d984ce47d25d
+  custom:scripting/monoscript/fileName/WFX_Demo_RandomDir.cs: 5adb98288eccda10fe06003139c10717 -> 83412d56870e7b7abf13729c1e4f5956
+  custom:scripting/monoscript/fileName/CFX_Demo_RandomDir.cs: ac40046481e5c4f71b9d19df2c090925 -> 06fce4b0d835d8793ccf8307925e464f
+  custom:scripting/monoscript/fileName/GhoulZombieController.cs: c2cb6201a8a4f30eeb9dbe3d83ffae65 -> 
+  custom:scripting/monoscript/fileName/WFX_LightFlicker.cs: 8611c610ebd4ed60d799ffbda1b30023 -> 1dfc4e18a67da64c518b9518e62ac4fe
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:scripting/monoscript/fileName/CFX_SpawnSystemEditor.cs: 961dd98ee368d293720faa5e6180c55f -> 8ef4ed7f7ca5c207cc3108bdafbacf7e
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:scripting/monoscript/fileName/CFX_Demo_RotateCamera.cs: 4093981287d7c6100e9fe689f7c9411e -> 1b6c7bbcbc0a01f776aafda62612b729
+  custom:scripting/monoscript/fileName/WFX_Demo_DeleteAfterDelay.cs: feab4ecb418cb313790125ab2f3e742b -> a8456c85d9636ec3b34432ce15771790
+  custom:scripting/monoscript/fileName/WFX_BulletHoleDecal.cs: f491e9aef5a5f2c367f064bcc6c862c0 -> b2a50a5c52cc82fa50f26101cc423417
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:scripting/monoscript/fileName/WFX_Demo_Wall.cs: 45876beed7f29c422b20e2de2113200e -> ebe32a1844666a18dc6e88646d62cdf3
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:scripting/monoscript/fileName/CFX_AutoStopLoopedEffect.cs: 62ac9e0b32d469c4b76269bc70152315 -> 0a1116784d96426e30ae544ef0d48111
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:scripting/monoscript/fileName/CFX_LightIntensityFade.cs: 2c0ab7605cddfd3eb20461d360619486 -> cdc33b13e94fac5095d515fc63c5bc75
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/WFX_Demo.cs: 9c911057018d0fe43728eb8d68b9a4e0 -> 16a8c51f1dc0063656a39d0352fd910f
+  custom:scripting/monoscript/fileName/CFX_Demo_Translate.cs: de26e2b5a3c6cbaa3cca0e0576709ad7 -> c85e572516e08f311291871f16fd4e55
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/CFX_AutoDestructShuriken.cs: 36bf2f3a00d4f92e7516bb0c5ac5f44d -> 7d622660cad3b608810f352fdbc5d485
+  custom:scripting/monoscript/fileName/WFX_Demo_New.cs: 9069327d8d485dc6e94b0abfa67c4280 -> 225d44912cd20a0c8b007d7146330c83
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Thread 0x16dc33000 may have been prematurely finalized
+- Loaded All Assemblies, in  0.363 seconds
+Refreshing native plugins compatible for Editor in 0.69 ms, found 2 plugins.
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.683 seconds
+Domain Reload Profiling: 1046ms
+	BeginReloadAssembly (108ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (3ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (42ms)
+	RebuildCommonClasses (24ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (15ms)
+	LoadAllAssembliesAndSetupDomain (208ms)
+		LoadAssemblies (202ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (44ms)
+			TypeCache.Refresh (39ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (683ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (250ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (4ms)
+			SetLoadedEditorAssemblies (2ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (36ms)
+			ProcessInitializeOnLoadAttributes (190ms)
+			ProcessInitializeOnLoadMethodAttributes (18ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (3ms)
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 0.91 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3164 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 21 unused Assets / (29.9 KB). Loaded Objects now: 3884.
+Memory consumption went from 386.1 MB to 386.1 MB.
+Total: 2.350042 ms (FindLiveObjects: 0.142750 ms CreateObjectMapping: 0.041875 ms MarkObjects: 2.125334 ms  DeleteObjects: 0.039708 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:scripting/monoscript/fileName/CFX_SpawnSystem.cs: 25a5e89f630a68b5be2dcafea5156cb7 -> da90548e33a5ac9767c2ab325529961a
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:scripting/monoscript/fileName/GrenadeCotroller.cs: 875e0b54e8b2b9de0d6d251a295ebd69 -> 
+  custom:scripting/monoscript/fileName/CFXEasyEditor.cs: f5aa4f7dc0fb6cc1f062891d3d23ad3a -> 975509eb43d0b0d90d19d984ce47d25d
+  custom:scripting/monoscript/fileName/WFX_Demo_RandomDir.cs: 5adb98288eccda10fe06003139c10717 -> 83412d56870e7b7abf13729c1e4f5956
+  custom:scripting/monoscript/fileName/CFX_Demo_RandomDir.cs: ac40046481e5c4f71b9d19df2c090925 -> 06fce4b0d835d8793ccf8307925e464f
+  custom:scripting/monoscript/fileName/GhoulZombieController.cs: c2cb6201a8a4f30eeb9dbe3d83ffae65 -> 
+  custom:scripting/monoscript/fileName/WFX_LightFlicker.cs: 8611c610ebd4ed60d799ffbda1b30023 -> 1dfc4e18a67da64c518b9518e62ac4fe
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:scripting/monoscript/fileName/CFX_SpawnSystemEditor.cs: 961dd98ee368d293720faa5e6180c55f -> 8ef4ed7f7ca5c207cc3108bdafbacf7e
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:scripting/monoscript/fileName/CFX_Demo_RotateCamera.cs: 4093981287d7c6100e9fe689f7c9411e -> 1b6c7bbcbc0a01f776aafda62612b729
+  custom:scripting/monoscript/fileName/WFX_Demo_DeleteAfterDelay.cs: feab4ecb418cb313790125ab2f3e742b -> a8456c85d9636ec3b34432ce15771790
+  custom:scripting/monoscript/fileName/WFX_BulletHoleDecal.cs: f491e9aef5a5f2c367f064bcc6c862c0 -> b2a50a5c52cc82fa50f26101cc423417
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:scripting/monoscript/fileName/WFX_Demo_Wall.cs: 45876beed7f29c422b20e2de2113200e -> ebe32a1844666a18dc6e88646d62cdf3
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:scripting/monoscript/fileName/CFX_AutoStopLoopedEffect.cs: 62ac9e0b32d469c4b76269bc70152315 -> 0a1116784d96426e30ae544ef0d48111
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:scripting/monoscript/fileName/CFX_LightIntensityFade.cs: 2c0ab7605cddfd3eb20461d360619486 -> cdc33b13e94fac5095d515fc63c5bc75
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/WFX_Demo.cs: 9c911057018d0fe43728eb8d68b9a4e0 -> 16a8c51f1dc0063656a39d0352fd910f
+  custom:scripting/monoscript/fileName/CFX_Demo_Translate.cs: de26e2b5a3c6cbaa3cca0e0576709ad7 -> c85e572516e08f311291871f16fd4e55
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/CFX_AutoDestructShuriken.cs: 36bf2f3a00d4f92e7516bb0c5ac5f44d -> 7d622660cad3b608810f352fdbc5d485
+  custom:scripting/monoscript/fileName/WFX_Demo_New.cs: 9069327d8d485dc6e94b0abfa67c4280 -> 225d44912cd20a0c8b007d7146330c83
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Thread 0x16dc33000 may have been prematurely finalized
+- Loaded All Assemblies, in  0.349 seconds
+Refreshing native plugins compatible for Editor in 0.81 ms, found 2 plugins.
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.648 seconds
+Domain Reload Profiling: 997ms
+	BeginReloadAssembly (123ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (3ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (58ms)
+	RebuildCommonClasses (23ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (15ms)
+	LoadAllAssembliesAndSetupDomain (179ms)
+		LoadAssemblies (192ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (24ms)
+			TypeCache.Refresh (11ms)
+				TypeCache.ScanAssembly (1ms)
+			ScanForSourceGeneratedMonoScriptInfo (8ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (648ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (241ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (2ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (33ms)
+			ProcessInitializeOnLoadAttributes (191ms)
+			ProcessInitializeOnLoadMethodAttributes (10ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (4ms)
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 0.86 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3164 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 21 unused Assets / (29.9 KB). Loaded Objects now: 3887.
+Memory consumption went from 390.7 MB to 390.7 MB.
+Total: 2.328666 ms (FindLiveObjects: 0.147500 ms CreateObjectMapping: 0.041583 ms MarkObjects: 2.095292 ms  DeleteObjects: 0.043416 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:scripting/monoscript/fileName/CFX_SpawnSystem.cs: 25a5e89f630a68b5be2dcafea5156cb7 -> da90548e33a5ac9767c2ab325529961a
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:scripting/monoscript/fileName/GrenadeCotroller.cs: 875e0b54e8b2b9de0d6d251a295ebd69 -> 
+  custom:scripting/monoscript/fileName/CFXEasyEditor.cs: f5aa4f7dc0fb6cc1f062891d3d23ad3a -> 975509eb43d0b0d90d19d984ce47d25d
+  custom:scripting/monoscript/fileName/WFX_Demo_RandomDir.cs: 5adb98288eccda10fe06003139c10717 -> 83412d56870e7b7abf13729c1e4f5956
+  custom:scripting/monoscript/fileName/CFX_Demo_RandomDir.cs: ac40046481e5c4f71b9d19df2c090925 -> 06fce4b0d835d8793ccf8307925e464f
+  custom:scripting/monoscript/fileName/GhoulZombieController.cs: c2cb6201a8a4f30eeb9dbe3d83ffae65 -> 
+  custom:scripting/monoscript/fileName/WFX_LightFlicker.cs: 8611c610ebd4ed60d799ffbda1b30023 -> 1dfc4e18a67da64c518b9518e62ac4fe
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:scripting/monoscript/fileName/CFX_SpawnSystemEditor.cs: 961dd98ee368d293720faa5e6180c55f -> 8ef4ed7f7ca5c207cc3108bdafbacf7e
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:scripting/monoscript/fileName/CFX_Demo_RotateCamera.cs: 4093981287d7c6100e9fe689f7c9411e -> 1b6c7bbcbc0a01f776aafda62612b729
+  custom:scripting/monoscript/fileName/WFX_Demo_DeleteAfterDelay.cs: feab4ecb418cb313790125ab2f3e742b -> a8456c85d9636ec3b34432ce15771790
+  custom:scripting/monoscript/fileName/WFX_BulletHoleDecal.cs: f491e9aef5a5f2c367f064bcc6c862c0 -> b2a50a5c52cc82fa50f26101cc423417
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:scripting/monoscript/fileName/WFX_Demo_Wall.cs: 45876beed7f29c422b20e2de2113200e -> ebe32a1844666a18dc6e88646d62cdf3
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:scripting/monoscript/fileName/CFX_AutoStopLoopedEffect.cs: 62ac9e0b32d469c4b76269bc70152315 -> 0a1116784d96426e30ae544ef0d48111
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:scripting/monoscript/fileName/CFX_LightIntensityFade.cs: 2c0ab7605cddfd3eb20461d360619486 -> cdc33b13e94fac5095d515fc63c5bc75
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/WFX_Demo.cs: 9c911057018d0fe43728eb8d68b9a4e0 -> 16a8c51f1dc0063656a39d0352fd910f
+  custom:scripting/monoscript/fileName/CFX_Demo_Translate.cs: de26e2b5a3c6cbaa3cca0e0576709ad7 -> c85e572516e08f311291871f16fd4e55
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/CFX_AutoDestructShuriken.cs: 36bf2f3a00d4f92e7516bb0c5ac5f44d -> 7d622660cad3b608810f352fdbc5d485
+  custom:scripting/monoscript/fileName/WFX_Demo_New.cs: 9069327d8d485dc6e94b0abfa67c4280 -> 225d44912cd20a0c8b007d7146330c83
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Thread 0x16dc33000 may have been prematurely finalized
+- Loaded All Assemblies, in  0.284 seconds
+Refreshing native plugins compatible for Editor in 0.78 ms, found 2 plugins.
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.469 seconds
+Domain Reload Profiling: 754ms
+	BeginReloadAssembly (90ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (3ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (31ms)
+	RebuildCommonClasses (24ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (14ms)
+	LoadAllAssembliesAndSetupDomain (147ms)
+		LoadAssemblies (158ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (21ms)
+			TypeCache.Refresh (16ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (470ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (246ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (4ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (35ms)
+			ProcessInitializeOnLoadAttributes (193ms)
+			ProcessInitializeOnLoadMethodAttributes (11ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (3ms)
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 0.78 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3164 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 21 unused Assets / (30.0 KB). Loaded Objects now: 3890.
+Memory consumption went from 395.3 MB to 395.2 MB.
+Total: 2.287875 ms (FindLiveObjects: 0.141958 ms CreateObjectMapping: 0.040542 ms MarkObjects: 2.061791 ms  DeleteObjects: 0.043000 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:scripting/monoscript/fileName/CFX_SpawnSystem.cs: 25a5e89f630a68b5be2dcafea5156cb7 -> da90548e33a5ac9767c2ab325529961a
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:scripting/monoscript/fileName/GrenadeCotroller.cs: 875e0b54e8b2b9de0d6d251a295ebd69 -> 
+  custom:scripting/monoscript/fileName/CFXEasyEditor.cs: f5aa4f7dc0fb6cc1f062891d3d23ad3a -> 975509eb43d0b0d90d19d984ce47d25d
+  custom:scripting/monoscript/fileName/WFX_Demo_RandomDir.cs: 5adb98288eccda10fe06003139c10717 -> 83412d56870e7b7abf13729c1e4f5956
+  custom:scripting/monoscript/fileName/CFX_Demo_RandomDir.cs: ac40046481e5c4f71b9d19df2c090925 -> 06fce4b0d835d8793ccf8307925e464f
+  custom:scripting/monoscript/fileName/GhoulZombieController.cs: c2cb6201a8a4f30eeb9dbe3d83ffae65 -> 
+  custom:scripting/monoscript/fileName/WFX_LightFlicker.cs: 8611c610ebd4ed60d799ffbda1b30023 -> 1dfc4e18a67da64c518b9518e62ac4fe
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:scripting/monoscript/fileName/CFX_SpawnSystemEditor.cs: 961dd98ee368d293720faa5e6180c55f -> 8ef4ed7f7ca5c207cc3108bdafbacf7e
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:scripting/monoscript/fileName/CFX_Demo_RotateCamera.cs: 4093981287d7c6100e9fe689f7c9411e -> 1b6c7bbcbc0a01f776aafda62612b729
+  custom:scripting/monoscript/fileName/WFX_Demo_DeleteAfterDelay.cs: feab4ecb418cb313790125ab2f3e742b -> a8456c85d9636ec3b34432ce15771790
+  custom:scripting/monoscript/fileName/WFX_BulletHoleDecal.cs: f491e9aef5a5f2c367f064bcc6c862c0 -> b2a50a5c52cc82fa50f26101cc423417
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:scripting/monoscript/fileName/WFX_Demo_Wall.cs: 45876beed7f29c422b20e2de2113200e -> ebe32a1844666a18dc6e88646d62cdf3
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:scripting/monoscript/fileName/CFX_AutoStopLoopedEffect.cs: 62ac9e0b32d469c4b76269bc70152315 -> 0a1116784d96426e30ae544ef0d48111
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:scripting/monoscript/fileName/CFX_LightIntensityFade.cs: 2c0ab7605cddfd3eb20461d360619486 -> cdc33b13e94fac5095d515fc63c5bc75
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/WFX_Demo.cs: 9c911057018d0fe43728eb8d68b9a4e0 -> 16a8c51f1dc0063656a39d0352fd910f
+  custom:scripting/monoscript/fileName/CFX_Demo_Translate.cs: de26e2b5a3c6cbaa3cca0e0576709ad7 -> c85e572516e08f311291871f16fd4e55
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/CFX_AutoDestructShuriken.cs: 36bf2f3a00d4f92e7516bb0c5ac5f44d -> 7d622660cad3b608810f352fdbc5d485
+  custom:scripting/monoscript/fileName/WFX_Demo_New.cs: 9069327d8d485dc6e94b0abfa67c4280 -> 225d44912cd20a0c8b007d7146330c83
+========================================================================
+Received Import Request.
+  Time since last request: 1618.271118 seconds.
+  path: Assets/Prefabs/assault4.prefab
+  artifactKey: Guid(07e3bafc50564455aac8e9c5fb8dface) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/assault4.prefab using Guid(07e3bafc50564455aac8e9c5fb8dface) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ce78839ed5290c59634d2352dacc97e') in 0.097306 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 14
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Thread 0x16dc33000 may have been prematurely finalized
+- Loaded All Assemblies, in  0.348 seconds
+Refreshing native plugins compatible for Editor in 1.61 ms, found 2 plugins.
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.675 seconds
+Domain Reload Profiling: 1024ms
+	BeginReloadAssembly (134ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (3ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (64ms)
+	RebuildCommonClasses (24ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (15ms)
+	LoadAllAssembliesAndSetupDomain (166ms)
+		LoadAssemblies (173ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (34ms)
+			TypeCache.Refresh (15ms)
+				TypeCache.ScanAssembly (1ms)
+			ScanForSourceGeneratedMonoScriptInfo (7ms)
+			ResolveRequiredComponents (11ms)
+	FinalizeReload (676ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (248ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (4ms)
+			SetLoadedEditorAssemblies (2ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (33ms)
+			ProcessInitializeOnLoadAttributes (196ms)
+			ProcessInitializeOnLoadMethodAttributes (13ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (4ms)
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 0.86 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3164 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 21 unused Assets / (29.9 KB). Loaded Objects now: 3893.
+Memory consumption went from 400.5 MB to 400.5 MB.
+Total: 2.423667 ms (FindLiveObjects: 0.128209 ms CreateObjectMapping: 0.042000 ms MarkObjects: 2.216750 ms  DeleteObjects: 0.036125 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:scripting/monoscript/fileName/CFX_SpawnSystem.cs: 25a5e89f630a68b5be2dcafea5156cb7 -> da90548e33a5ac9767c2ab325529961a
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:scripting/monoscript/fileName/GrenadeCotroller.cs: 875e0b54e8b2b9de0d6d251a295ebd69 -> 
+  custom:scripting/monoscript/fileName/CFXEasyEditor.cs: f5aa4f7dc0fb6cc1f062891d3d23ad3a -> 975509eb43d0b0d90d19d984ce47d25d
+  custom:scripting/monoscript/fileName/WFX_Demo_RandomDir.cs: 5adb98288eccda10fe06003139c10717 -> 83412d56870e7b7abf13729c1e4f5956
+  custom:scripting/monoscript/fileName/CFX_Demo_RandomDir.cs: ac40046481e5c4f71b9d19df2c090925 -> 06fce4b0d835d8793ccf8307925e464f
+  custom:scripting/monoscript/fileName/GhoulZombieController.cs: c2cb6201a8a4f30eeb9dbe3d83ffae65 -> 
+  custom:scripting/monoscript/fileName/WFX_LightFlicker.cs: 8611c610ebd4ed60d799ffbda1b30023 -> 1dfc4e18a67da64c518b9518e62ac4fe
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:scripting/monoscript/fileName/CFX_SpawnSystemEditor.cs: 961dd98ee368d293720faa5e6180c55f -> 8ef4ed7f7ca5c207cc3108bdafbacf7e
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:scripting/monoscript/fileName/CFX_Demo_RotateCamera.cs: 4093981287d7c6100e9fe689f7c9411e -> 1b6c7bbcbc0a01f776aafda62612b729
+  custom:scripting/monoscript/fileName/WFX_Demo_DeleteAfterDelay.cs: feab4ecb418cb313790125ab2f3e742b -> a8456c85d9636ec3b34432ce15771790
+  custom:scripting/monoscript/fileName/WFX_BulletHoleDecal.cs: f491e9aef5a5f2c367f064bcc6c862c0 -> b2a50a5c52cc82fa50f26101cc423417
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:scripting/monoscript/fileName/WFX_Demo_Wall.cs: 45876beed7f29c422b20e2de2113200e -> ebe32a1844666a18dc6e88646d62cdf3
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:scripting/monoscript/fileName/CFX_AutoStopLoopedEffect.cs: 62ac9e0b32d469c4b76269bc70152315 -> 0a1116784d96426e30ae544ef0d48111
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:scripting/monoscript/fileName/CFX_LightIntensityFade.cs: 2c0ab7605cddfd3eb20461d360619486 -> cdc33b13e94fac5095d515fc63c5bc75
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/WFX_Demo.cs: 9c911057018d0fe43728eb8d68b9a4e0 -> 16a8c51f1dc0063656a39d0352fd910f
+  custom:scripting/monoscript/fileName/CFX_Demo_Translate.cs: de26e2b5a3c6cbaa3cca0e0576709ad7 -> c85e572516e08f311291871f16fd4e55
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/CFX_AutoDestructShuriken.cs: 36bf2f3a00d4f92e7516bb0c5ac5f44d -> 7d622660cad3b608810f352fdbc5d485
+  custom:scripting/monoscript/fileName/WFX_Demo_New.cs: 9069327d8d485dc6e94b0abfa67c4280 -> 225d44912cd20a0c8b007d7146330c83
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Thread 0x16dc33000 may have been prematurely finalized
+- Loaded All Assemblies, in  0.268 seconds
+Refreshing native plugins compatible for Editor in 0.79 ms, found 2 plugins.
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.523 seconds
+Domain Reload Profiling: 791ms
+	BeginReloadAssembly (103ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (3ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (45ms)
+	RebuildCommonClasses (23ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (13ms)
+	LoadAllAssembliesAndSetupDomain (121ms)
+		LoadAssemblies (142ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (11ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (3ms)
+	FinalizeReload (523ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (245ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (4ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (35ms)
+			ProcessInitializeOnLoadAttributes (191ms)
+			ProcessInitializeOnLoadMethodAttributes (12ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (3ms)
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 0.94 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3164 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 21 unused Assets / (29.8 KB). Loaded Objects now: 3896.
+Memory consumption went from 405.1 MB to 405.0 MB.
+Total: 2.314000 ms (FindLiveObjects: 0.137208 ms CreateObjectMapping: 0.039125 ms MarkObjects: 2.096209 ms  DeleteObjects: 0.040500 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:scripting/monoscript/fileName/CFX_SpawnSystem.cs: 25a5e89f630a68b5be2dcafea5156cb7 -> da90548e33a5ac9767c2ab325529961a
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:scripting/monoscript/fileName/GrenadeCotroller.cs: 875e0b54e8b2b9de0d6d251a295ebd69 -> 
+  custom:scripting/monoscript/fileName/CFXEasyEditor.cs: f5aa4f7dc0fb6cc1f062891d3d23ad3a -> 975509eb43d0b0d90d19d984ce47d25d
+  custom:scripting/monoscript/fileName/WFX_Demo_RandomDir.cs: 5adb98288eccda10fe06003139c10717 -> 83412d56870e7b7abf13729c1e4f5956
+  custom:scripting/monoscript/fileName/CFX_Demo_RandomDir.cs: ac40046481e5c4f71b9d19df2c090925 -> 06fce4b0d835d8793ccf8307925e464f
+  custom:scripting/monoscript/fileName/GhoulZombieController.cs: c2cb6201a8a4f30eeb9dbe3d83ffae65 -> 
+  custom:scripting/monoscript/fileName/WFX_LightFlicker.cs: 8611c610ebd4ed60d799ffbda1b30023 -> 1dfc4e18a67da64c518b9518e62ac4fe
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:scripting/monoscript/fileName/CFX_SpawnSystemEditor.cs: 961dd98ee368d293720faa5e6180c55f -> 8ef4ed7f7ca5c207cc3108bdafbacf7e
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:scripting/monoscript/fileName/CFX_Demo_RotateCamera.cs: 4093981287d7c6100e9fe689f7c9411e -> 1b6c7bbcbc0a01f776aafda62612b729
+  custom:scripting/monoscript/fileName/WFX_Demo_DeleteAfterDelay.cs: feab4ecb418cb313790125ab2f3e742b -> a8456c85d9636ec3b34432ce15771790
+  custom:scripting/monoscript/fileName/WFX_BulletHoleDecal.cs: f491e9aef5a5f2c367f064bcc6c862c0 -> b2a50a5c52cc82fa50f26101cc423417
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:scripting/monoscript/fileName/WFX_Demo_Wall.cs: 45876beed7f29c422b20e2de2113200e -> ebe32a1844666a18dc6e88646d62cdf3
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:scripting/monoscript/fileName/CFX_AutoStopLoopedEffect.cs: 62ac9e0b32d469c4b76269bc70152315 -> 0a1116784d96426e30ae544ef0d48111
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:scripting/monoscript/fileName/CFX_LightIntensityFade.cs: 2c0ab7605cddfd3eb20461d360619486 -> cdc33b13e94fac5095d515fc63c5bc75
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/WFX_Demo.cs: 9c911057018d0fe43728eb8d68b9a4e0 -> 16a8c51f1dc0063656a39d0352fd910f
+  custom:scripting/monoscript/fileName/CFX_Demo_Translate.cs: de26e2b5a3c6cbaa3cca0e0576709ad7 -> c85e572516e08f311291871f16fd4e55
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/CFX_AutoDestructShuriken.cs: 36bf2f3a00d4f92e7516bb0c5ac5f44d -> 7d622660cad3b608810f352fdbc5d485
+  custom:scripting/monoscript/fileName/WFX_Demo_New.cs: 9069327d8d485dc6e94b0abfa67c4280 -> 225d44912cd20a0c8b007d7146330c83

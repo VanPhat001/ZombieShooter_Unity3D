@@ -10,6 +10,7 @@ TagManager:
   - ObjectGround
   - FxTemporaire
   - Gun
+  - WeaponsPack
   layers:
   - Default
   - TransparentFX

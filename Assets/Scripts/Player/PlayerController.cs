@@ -264,6 +264,13 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        if (CanvasController.Instance.suggestReloadTextVisible
+            && Input.GetKeyDown(KeyCode.C))
+        {
+            this.gunController.RestoreToMaxBullets();
+            UpdateBulletOnScreen();
+        }
+
         if (!this.reloading && Input.GetKeyDown(KeyCode.R))
         {
             StartCoroutine(CoroutineLoadBulletsIntoMagazine());

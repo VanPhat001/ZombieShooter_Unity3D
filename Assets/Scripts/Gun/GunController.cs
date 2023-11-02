@@ -44,4 +44,9 @@ public class GunController : MonoBehaviour
 
         return true;
     }
+
+    public void RestoreToMaxBullets()
+    {
+        this.currentTotalBullets = this.maxBullets;
+    }
 }
