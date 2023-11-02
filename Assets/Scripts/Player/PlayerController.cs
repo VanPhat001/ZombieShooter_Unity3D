@@ -80,6 +80,18 @@ public class PlayerController : MonoBehaviour
         CanvasController.Instance.SetHealth(percent: this.currentHP / this.maxHP);
     }
 
+    public void HealAmount(float value)
+    {
+        this.currentHP = Mathf.Clamp(this.currentHP + value, 0, maxHP);
+        CanvasController.Instance.SetHealth(percent: this.currentHP / this.maxHP);
+    }
+
+    public void HealPercent(float percent)
+    {
+        this.currentHP = Mathf.Clamp(this.currentHP + this.maxHP * percent, 0, maxHP);
+        CanvasController.Instance.SetHealth(percent: this.currentHP / this.maxHP);
+    }
+
     public void PlayFireSound()
     {
         this.audioSource.PlayOneShot(this.gunController.fireSound);
@@ -202,11 +214,16 @@ public class PlayerController : MonoBehaviour
             this.grenadeWrapper.SetActive(true);
             CanvasController.Instance.SetVisibleSight(false);
 
-            if (this.reloading)
-            {
-                this.reloading = false;
-                CanvasController.Instance.ForceStopReload();
-            }
+            CancelReload();
+        }
+    }
+
+    void CancelReload()
+    {
+        if (this.reloading)
+        {
+            this.reloading = false;
+            CanvasController.Instance.ForceStopReload();
         }
     }
 
@@ -214,6 +231,8 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(1) && this.DetectGun != null)
         {
+            CancelReload();
+
             Transform oddGun = this.gunWrapper.transform.GetChild(0);
             Transform newGun = this.DetectGun.transform;
 

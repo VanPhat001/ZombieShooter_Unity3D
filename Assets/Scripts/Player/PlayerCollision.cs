@@ -27,7 +27,8 @@ public class PlayerCollision : MonoBehaviour
         }
         else if (tag.Equals("HealthPack"))
         {
-
+            PlayerController.Instance.HealPercent(0.3f);
+            Destroy( other.gameObject);
         }
     }
 
