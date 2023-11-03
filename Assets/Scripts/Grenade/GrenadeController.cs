@@ -32,7 +32,12 @@ public class GrenadeController : MonoBehaviour
         {
             if (collider.tag.Equals("Zombie"))
             {
-                collider.GetComponent<ZombieController>().ReceiveDamage(grenadeDamage);
+                ZombieController zombie = collider.GetComponent<ZombieController>();
+                zombie.ReceiveDamage(grenadeDamage);
+                if (zombie.currentHP <= 0)
+                {
+                    CanvasController.Instance.AddScore(zombie.zombieScore);
+                }
             }
         }
 

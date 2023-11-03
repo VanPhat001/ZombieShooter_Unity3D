@@ -1,9 +1,17 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerShooter : MonoBehaviour
 {
+    public static PlayerShooter Instance { get; private set; }
+
     float timeBetweenShoots => PlayerController.Instance.gunController.timeBetweenShoots;
     float tick = 0;
+
+    private void Start()
+    {
+        Instance = this;
+    }
 
     public void ShootObject()
     {
@@ -16,7 +24,7 @@ public class PlayerShooter : MonoBehaviour
         zombie.ReceiveDamage(damage: PlayerController.Instance.gunController.damage);
         if (zombie.currentHP <= 0)
         {
-            CanvasController.Instance.AddScore(10);
+            CanvasController.Instance.AddScore(zombie.zombieScore);
         }
     }
 
@@ -61,9 +69,48 @@ public class PlayerShooter : MonoBehaviour
         Rigidbody rigid = newGrenade.GetComponent<Rigidbody>();
 
         rigid.isKinematic = false;
-        rigid.AddForce((cam.transform.forward + cam.transform.up) * 220);
+        rigid.AddForce(PlayerController.Instance.grenadeThrowingVector);
 
         newGrenade.GetComponent<GrenadeController>().Explosion();
+    }
+
+    public void HideGrenadeTrajectory()
+    {
+        PlayerController.Instance.line.positionCount = 0;
+    }
+
+    public void ShowGrenadeTrajectory(Vector3 forceVector, Rigidbody rigidbody, Vector3 startingPoint)
+    {
+        int _lineSementCount = 10;
+        var linePoints = new List<Vector3>();
+
+        Vector3 velocity = (forceVector / rigidbody.mass) * Time.fixedDeltaTime;
+        float flightDuration = (2 * velocity.y) / Physics.gravity.y;
+        float stepTime = flightDuration / _lineSementCount;
+
+        linePoints.Clear();
+
+        for (int i = 0; i < _lineSementCount; i++)
+        {
+            float stepTimePassed = stepTime * i;
+
+            Vector3 movementVector = new Vector3(
+                velocity.x * stepTimePassed,
+                velocity.y * stepTimePassed - 0.5f * Physics.gravity.y * stepTimePassed * stepTimePassed,
+                velocity.z * stepTimePassed
+            );
+
+            RaycastHit hit;
+            if (Physics.Raycast(startingPoint, -movementVector, out hit, movementVector.magnitude))
+            {
+                break;
+            }
+
+            linePoints.Add(-movementVector + startingPoint);
+        }
+
+        PlayerController.Instance.line.positionCount = linePoints.Count;
+        PlayerController.Instance.line.SetPositions(linePoints.ToArray());
     }
 
     private void Update()
@@ -78,6 +125,14 @@ public class PlayerShooter : MonoBehaviour
             && gunController.currentTotalBullets > 0)
         {
             StartCoroutine(PlayerController.Instance.CoroutineLoadBulletsIntoMagazine());
+        }
+
+        if (!player.useGun)
+        {
+            Transform grenade = player.grenadeWrapper.transform.GetChild(0);
+            GameObject cam = player.fpsCamera;
+            Rigidbody rigid = grenade.GetComponent<Rigidbody>();
+            ShowGrenadeTrajectory(player.grenadeThrowingVector, rigid, grenade.position);
         }
 
         if (Input.GetMouseButton(0))

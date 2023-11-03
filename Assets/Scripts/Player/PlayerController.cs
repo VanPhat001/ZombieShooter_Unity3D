@@ -17,17 +17,20 @@ public class PlayerController : MonoBehaviour
     public bool reloading { get; private set; } = false;
 
     public float speed = 3.5f;
+    public bool isDead { get; private set; } = false;
     public float speedUpRate = 1.8f;
     public bool useGun { get; private set; } = true;
+    public float grenadeThrowingForce = 220f;
+    public Vector3 grenadeThrowingVector => (this.fpsCamera.transform.forward + this.fpsCamera.transform.up) * this.grenadeThrowingForce;
     public GunController gunController { get; private set; }
-    public bool isDead { get; private set; } = false;
+    public LineRenderer line { get; private set; }
 
 
     float totalRecoilUp = 0;
     Rigidbody rigid;
     AudioSource audioSource;
-
     GameObject detectGun = null;
+
     public GameObject DetectGun
     {
         get => detectGun;
@@ -58,12 +61,15 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         Instance = this;
+
         GameController.Instance.Continue();
         Cursor.lockState = CursorLockMode.Locked;
         CanvasController.Instance.UpdateBestScoreText();
         CanvasController.Instance.SetHealth(1);
+
         this.rigid = this.GetComponent<Rigidbody>();
         this.audioSource = this.GetComponent<AudioSource>();
+        this.line = this.GetComponent<LineRenderer>();
 
         GameObject gun = this.gunWrapper.transform.GetChild(0).gameObject;
         this.gunController = gun.GetComponent<GunController>();
@@ -220,6 +226,7 @@ public class PlayerController : MonoBehaviour
             this.gunWrapper.SetActive(true);
             this.grenadeWrapper.SetActive(false);
             CanvasController.Instance.SetVisibleSight(true);
+            PlayerShooter.Instance.HideGrenadeTrajectory();
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
