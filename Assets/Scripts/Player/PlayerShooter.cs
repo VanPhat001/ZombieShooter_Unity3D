@@ -30,7 +30,7 @@ public class PlayerShooter : MonoBehaviour
             Debug.Log(tag);
 
             bool isShoot = false;
-            if (tag.StartsWith("Object"))
+            if (tag.StartsWith("Object") || tag.Equals("House"))
             {
                 isShoot = true;
                 ShootObject();
@@ -43,10 +43,12 @@ public class PlayerShooter : MonoBehaviour
 
             if (isShoot)
             {
-                PlayerController.Instance.PlayFireSound();
-                PlayerController.Instance.AddBulletImpact(hit.point);
-                PlayerController.Instance.gunController.Shoot();
-                PlayerController.Instance.UpdateBulletOnScreen();
+                PlayerController player = PlayerController.Instance;
+                player.AddRecoil(player.gunController.recoil);
+                player.PlayFireSound();
+                player.AddBulletImpact(hit.point);
+                player.gunController.Shoot();
+                player.UpdateBulletOnScreen();
             }
         }
     }

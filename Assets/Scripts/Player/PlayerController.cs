@@ -16,12 +16,14 @@ public class PlayerController : MonoBehaviour
     public float maxHP { get; private set; } = 100;
     public bool reloading { get; private set; } = false;
 
-    public float speed = 5f;
+    public float speed = 3.5f;
     public float speedUpRate = 1.8f;
     public bool useGun { get; private set; } = true;
     public GunController gunController { get; private set; }
     public bool isDead { get; private set; } = false;
 
+
+    float totalRecoilUp = 0;
     Rigidbody rigid;
     AudioSource audioSource;
 
@@ -142,30 +144,43 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    void LimitRotateHeadInRange()
+    {
+        Vector3 euler = this.fpsCamera.transform.rotation.eulerAngles;
+        float maxBottomRotation = 44;
+        float maxTopRotation = -30;
+        float newX = 0;
+
+        if (maxBottomRotation < euler.x && euler.x < 360 + maxTopRotation)
+        {
+            float dBot = euler.x - maxBottomRotation;
+            float dTop = 360 + maxTopRotation - euler.x;
+            newX = dBot < dTop ? maxBottomRotation : 360 + maxTopRotation;
+        }
+
+        if (newX != 0)
+        {
+            this.fpsCamera.transform.rotation = Quaternion.Euler(newX, euler.y, euler.z);
+        }
+        this.weapons.transform.rotation = this.fpsCamera.transform.rotation;
+    }
+
     void RotateHead()
     {
         float vertical = Input.GetAxis("Mouse Y");
         if (vertical != 0)
         {
             this.fpsCamera.transform.Rotate(-vertical * 0.7f, 0, 0);
+            LimitRotateHeadInRange();
+            totalRecoilUp = 0;
+            return;
+        }
 
-            Vector3 euler = this.fpsCamera.transform.rotation.eulerAngles;
-            float maxBottomRotation = 44;
-            float maxTopRotation = -30;
-            float newX = 0;
-
-            if (maxBottomRotation < euler.x && euler.x < 360 + maxTopRotation)
-            {
-                float dBot = euler.x - maxBottomRotation;
-                float dTop = 360 + maxTopRotation - euler.x;
-                newX = dBot < dTop ? maxBottomRotation : 360 + maxTopRotation;
-            }
-
-            if (newX != 0)
-            {
-                this.fpsCamera.transform.rotation = Quaternion.Euler(newX, euler.y, euler.z);
-            }
-            this.weapons.transform.rotation = this.fpsCamera.transform.rotation;
+        if (this.totalRecoilUp != 0)
+        {
+            float restoreValue = this.totalRecoilUp < 0.05f ? this.totalRecoilUp : 0.05f;
+            AddRecoil(-restoreValue, true);
+            this.totalRecoilUp -= restoreValue;
         }
     }
 
@@ -281,6 +296,16 @@ public class PlayerController : MonoBehaviour
         this.reloading = false;
     }
 
+    public void AddRecoil(float recoilUp, bool restoreToBalanceRotation = false)
+    {
+        if (!restoreToBalanceRotation)
+        {
+            totalRecoilUp += recoilUp;
+        }
+        this.fpsCamera.transform.Rotate(-recoilUp, 0, 0);
+        LimitRotateHeadInRange();
+    }
+
     private void Update()
     {
         if (this.isDead)
@@ -311,7 +336,7 @@ public class PlayerController : MonoBehaviour
             StartCoroutine(CoroutineLoadBulletsIntoMagazine());
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape) )
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (CanvasController.Instance.restartMenuBoard.activeInHierarchy)
             {
