@@ -58,6 +58,7 @@ public class PlayerController : MonoBehaviour
         Instance = this;
         GameController.Instance.Continue();
         Cursor.lockState = CursorLockMode.Locked;
+        CanvasController.Instance.UpdateBestScoreText();
         CanvasController.Instance.SetHealth(1);
         this.rigid = this.GetComponent<Rigidbody>();
         this.audioSource = this.GetComponent<AudioSource>();
@@ -291,7 +292,9 @@ public class PlayerController : MonoBehaviour
         {
             this.isDead = true;
             Cursor.lockState = CursorLockMode.None;
+            GameController.Instance.UpdateBestScore(CanvasController.Instance.score);
             GameController.Instance.Pause();
+            CanvasController.Instance.UpdateBestScoreText();
             CanvasController.Instance.SetVisibleRestartMenuBard(true);
             return;
         }

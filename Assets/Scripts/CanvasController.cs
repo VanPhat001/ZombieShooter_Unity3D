@@ -42,6 +42,7 @@ public class CanvasController : MonoBehaviour
     public GameObject reloadObject;
     public GameObject suggestReloadText;
     public GameObject restartMenuBoard;
+    public TMP_Text bestScoreText;
 
     public float health { get; private set; }
     public float time { get; private set; }
@@ -131,6 +132,11 @@ public class CanvasController : MonoBehaviour
         {
             this.restartMenuBoard.SetActive(visible);
         }
+    }
+
+    public void UpdateBestScoreText()
+    {
+        this.bestScoreText.text = "Best Score: " + GameController.Instance.GetBestScore();
     }
 
     private void Update()

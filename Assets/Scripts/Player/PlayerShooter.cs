@@ -70,24 +70,21 @@ public class PlayerShooter : MonoBehaviour
         PlayerController player = PlayerController.Instance;
         GunController gunController = player.gunController;
 
-        if (player.useGun 
+        if (player.useGun
             && !player.reloading
-            && gunController.currentBulletsInMagazine == 0 
+            && gunController.currentBulletsInMagazine == 0
             && gunController.currentTotalBullets > 0)
-            {
-                StartCoroutine(PlayerController.Instance.CoroutineLoadBulletsIntoMagazine());
-            }
+        {
+            StartCoroutine(PlayerController.Instance.CoroutineLoadBulletsIntoMagazine());
+        }
 
         if (Input.GetMouseButton(0))
         {
             if (player.useGun)
             {
-                if (this.tick < this.timeBetweenShoots)
-                {
-                    return;
-                }
-
-                if (gunController.currentBulletsInMagazine <= 0)
+                if (player.reloading
+                    || this.tick < this.timeBetweenShoots
+                    || gunController.currentBulletsInMagazine <= 0)
                 {
                     return;
                 }

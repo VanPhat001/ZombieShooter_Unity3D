@@ -27,6 +27,23 @@ public class GameController : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
+    public float GetBestScore()
+    {
+        return PlayerPrefs.GetFloat("BestScore", 0);
+    }
+
+    public float UpdateBestScore(float score)
+    {
+        float currentBestScore = GetBestScore();
+        if (score > currentBestScore)
+        {
+            PlayerPrefs.SetFloat("BestScore", score);
+            currentBestScore = score;
+        }
+
+        return currentBestScore;
+    }
+
     public void Quit()
     {
         #if UNITY_EDITOR
