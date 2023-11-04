@@ -7,6 +7,8 @@ public class SpawnPointsController : MonoBehaviour
     public GameObject zombie;
     public GameObject cyberZombie;
     GameObject[] spawnPoints;
+    float timeMakeZombie = 4.7f;
+    float h = 0.9996f;
     float tick = 0;
 
     private void Start()
@@ -39,8 +41,9 @@ public class SpawnPointsController : MonoBehaviour
     private void Update()
     {
         this.tick += Time.deltaTime;
-        if (this.tick >= 2)
+        if (this.tick >= timeMakeZombie)
         {
+            timeMakeZombie *= h;
             this.tick = 0;
             int idx = SelectRandomSpawnPoint();
             int randValue = Random.Range(0, 10);
@@ -49,7 +52,7 @@ public class SpawnPointsController : MonoBehaviour
             {
                 MakeZombie(idx);
             }
-            else 
+            else
             {
                 MakeCyberZombie(idx);
             }
