@@ -11,6 +11,9 @@ TagManager:
   - FxTemporaire
   - Gun
   - WeaponsPack
+  - House
+  - ZombieCyber
+  - ZombieCyberSword
   layers:
   - Default
   - TransparentFX

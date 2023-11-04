@@ -1649,7 +1649,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &598168135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4749,6 +4749,79 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2138010390}
   m_CullTransparentMesh: 1
+--- !u!1001 &85501124914855683
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1267480295188152714, guid: f6002b09f5dd540808b8e408c57bb11f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.160327
+      objectReference: {fileID: 0}
+    - target: {fileID: 1267480295188152714, guid: f6002b09f5dd540808b8e408c57bb11f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.00000023841858
+      objectReference: {fileID: 0}
+    - target: {fileID: 1267480295188152714, guid: f6002b09f5dd540808b8e408c57bb11f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 7.5039706
+      objectReference: {fileID: 0}
+    - target: {fileID: 1267480295188152714, guid: f6002b09f5dd540808b8e408c57bb11f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1267480295188152714, guid: f6002b09f5dd540808b8e408c57bb11f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1267480295188152714, guid: f6002b09f5dd540808b8e408c57bb11f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1267480295188152714, guid: f6002b09f5dd540808b8e408c57bb11f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1267480295188152714, guid: f6002b09f5dd540808b8e408c57bb11f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1267480295188152714, guid: f6002b09f5dd540808b8e408c57bb11f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1267480295188152714, guid: f6002b09f5dd540808b8e408c57bb11f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2823750113444266189, guid: f6002b09f5dd540808b8e408c57bb11f, type: 3}
+      propertyPath: m_Name
+      value: CyberZombie
+      objectReference: {fileID: 0}
+    - target: {fileID: 5376244356276971485, guid: f6002b09f5dd540808b8e408c57bb11f, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5376244356276971485, guid: f6002b09f5dd540808b8e408c57bb11f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5376244356276971485, guid: f6002b09f5dd540808b8e408c57bb11f, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8978863746650472268, guid: f6002b09f5dd540808b8e408c57bb11f, type: 3}
+      propertyPath: goal
+      value: 
+      objectReference: {fileID: 1861821839}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f6002b09f5dd540808b8e408c57bb11f, type: 3}
 --- !u!1001 &2000595510438755100
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5179,3 +5252,4 @@ SceneRoots:
   - {fileID: 1364482051}
   - {fileID: 1316936084}
   - {fileID: 775913633}
+  - {fileID: 85501124914855683}

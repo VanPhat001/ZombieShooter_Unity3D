@@ -371,6 +371,7 @@
 "Assets/Downloads/Low Poly Guns/Scripts/GunsMenu.cs"
 "Assets/Downloads/Low Poly Guns/Scripts/GunView.cs"
 "Assets/Scripts/CanvasController.cs"
+"Assets/Scripts/CyberZombie/CyberZombieController.cs"
 "Assets/Scripts/GameController.cs"
 "Assets/Scripts/Grenade/GrenadeController.cs"
 "Assets/Scripts/Gun/GunController.cs"

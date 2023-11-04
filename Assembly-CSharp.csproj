@@ -87,6 +87,7 @@
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/ShaderPropAnimator.cs" />
      <Compile Include="Assets/Downloads/JMO Assets/WarFX/Demo/Assets/CFX_Demo_RandomDir.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/CameraController.cs" />
+     <Compile Include="Assets/Scripts/CyberZombie/CyberZombieController.cs" />
      <Compile Include="Assets/Scripts/Gun/GunController.cs" />
      <Compile Include="Assets/Downloads/Low Poly Guns/Scripts/GunsMenu.cs" />
      <Compile Include="Assets/Downloads/JMO Assets/WarFX/Demo/Assets/WFX_Demo_Wall.cs" />
@@ -107,6 +108,7 @@
      <None Include="Assets/TextMesh Pro/Examples &amp; Extras/Fonts/Oswald-Bold - OFL.txt" />
      <None Include="Assets/Downloads/JMO Assets/WarFX/_Effects/MuzzleFlashes/!MuzzleFlash Differences.txt" />
      <None Include="Assets/TextMesh Pro/Examples &amp; Extras/Fonts/Anton OFL.txt" />
+     <None Include="Assets/Cyber Monsters 2/Standard_Two_Sided.shader" />
      <None Include="Assets/Downloads/JMO Assets/WarFX/Shaders/WFX_S Alpha-Specular TintColor.shader" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF SSD.shader" />
