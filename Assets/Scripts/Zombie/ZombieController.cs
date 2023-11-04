@@ -7,6 +7,7 @@ public class ZombieController : MonoBehaviour
     public Slider healthBar;
     public GameObject goal;
     public float zombieScore = 10f;
+    // public float zombieAttackDamage = 10f;
     public float currentHP { get; private set; } = 100;
     public float maxHP { get; private set; } = 100;
     public bool isDead { get; private set; } = false;

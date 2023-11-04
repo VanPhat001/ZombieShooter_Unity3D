@@ -28,6 +28,16 @@ public class PlayerShooter : MonoBehaviour
         }
     }
 
+    public void ShootCyberZombie(RaycastHit hit)
+    {
+        var cyberZombie = hit.transform.GetComponent<CyberZombieController>();
+        cyberZombie.ReceiveDamage(damage: PlayerController.Instance.gunController.damage);
+        if (cyberZombie.currentHP <= 0)
+        {
+            CanvasController.Instance.AddScore(cyberZombie.zombieScore);
+        }
+    }
+
     void Shoot()
     {
         GameObject cam = PlayerController.Instance.fpsCamera;
@@ -47,6 +57,11 @@ public class PlayerShooter : MonoBehaviour
             {
                 isShoot = true;
                 ShootZombie(hit);
+            }
+            else if (tag.Equals("ZombieCyber"))
+            {
+                isShoot = true;
+                ShootCyberZombie(hit);
             }
 
             if (isShoot)

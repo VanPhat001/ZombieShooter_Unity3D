@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpawnPointsController : MonoBehaviour
 {
     public GameObject zombie;
+    public GameObject cyberZombie;
     GameObject[] spawnPoints;
     float tick = 0;
 
@@ -29,6 +30,12 @@ public class SpawnPointsController : MonoBehaviour
         newZombie.GetComponent<ZombieController>().goal = PlayerController.Instance.gameObject;
     }
 
+    void MakeCyberZombie(int idx)
+    {
+        var newZombie = Instantiate(this.cyberZombie, this.spawnPoints[idx].transform.position, Quaternion.identity);
+        newZombie.GetComponent<CyberZombieController>().goal = PlayerController.Instance.gameObject;
+    }
+
     private void Update()
     {
         this.tick += Time.deltaTime;
@@ -38,7 +45,14 @@ public class SpawnPointsController : MonoBehaviour
             int idx = SelectRandomSpawnPoint();
             int randValue = Random.Range(0, 10);
 
-            MakeZombie(idx);
+            if (randValue <= 7)
+            {
+                MakeZombie(idx);
+            }
+            else 
+            {
+                MakeCyberZombie(idx);
+            }
         }
     }
 }
