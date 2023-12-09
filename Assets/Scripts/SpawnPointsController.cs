@@ -54,7 +54,7 @@ public class SpawnPointsController : MonoBehaviour
             }
             else
             {
-                MakeCyberZombie(idx);
+                // MakeCyberZombie(idx);
             }
         }
     }

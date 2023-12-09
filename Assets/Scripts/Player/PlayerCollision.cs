@@ -15,12 +15,14 @@ public class PlayerCollision : MonoBehaviour
         if (tag.Equals("ZombieRightHand"))
         {
             // ZombieController zombie = other.GetComponent<ZombieController>();
-            PlayerController.Instance.ReceiveDamage(10);
+            PlayerController.Instance.ReceiveDamage(4);
+            PlayerController.Instance.PlayHurtSound();
         }
         else if (tag.Equals("ZombieCyberSword"))
         {
             // CyberZombieController cyber = other.GetComponent<CyberZombieController>();
-            PlayerController.Instance.ReceiveDamage(damage: 14);
+            PlayerController.Instance.ReceiveDamage(damage: 6);
+            PlayerController.Instance.PlayHurtSound();
         }
     }
 

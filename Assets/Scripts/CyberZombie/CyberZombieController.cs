@@ -11,9 +11,9 @@ public class CyberZombieController : MonoBehaviour
     public GameObject goal;
     public float zombieScore = 25f;
     // public float zombieAttackDamage = 14f;
-    public float zombieShootDamage = 18f;
-    public float currentHP { get; private set; } = 100;
-    public float maxHP { get; private set; } = 100;
+    public float zombieShootDamage = 7f;
+    public float currentHP { get; private set; } = 160;
+    public float maxHP { get; private set; } = 160;
     public bool isDead { get; private set; } = false;
     public bool shooting { get; private set; } = false;
     public AudioClip deathSound;

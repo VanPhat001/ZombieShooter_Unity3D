@@ -78,6 +78,8 @@ public class PlayerShooter : MonoBehaviour
 
     void ThrowGrenade()
     {
+        PlayerController.Instance.grenadeRemains--;
+
         GameObject cam = PlayerController.Instance.fpsCamera;
         Transform grenade = PlayerController.Instance.grenadeWrapper.transform.GetChild(0);
         GameObject newGrenade = Instantiate(grenade.gameObject, grenade.position, grenade.rotation);
@@ -87,6 +89,7 @@ public class PlayerShooter : MonoBehaviour
         rigid.AddForce(PlayerController.Instance.grenadeThrowingVector);
 
         newGrenade.GetComponent<GrenadeController>().Explosion();
+        PlayerController.Instance.UpdateBulletOnScreen();
     }
 
     public void HideGrenadeTrajectory()
@@ -166,7 +169,7 @@ public class PlayerShooter : MonoBehaviour
             }
             else // use grenade
             {
-                if (this.tick < 0.4f)
+                if (this.tick < 0.4f || PlayerController.Instance.grenadeRemains == 0)
                 {
                     return;
                 }

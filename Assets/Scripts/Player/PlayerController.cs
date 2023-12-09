@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -11,7 +12,8 @@ public class PlayerController : MonoBehaviour
     public GameObject grenadeWrapper;
     public GameObject bulletImpact;
 
-
+    public int grenadeRemains = 5;
+    public float jumpForce = 200f;
     public float currentHP { get; private set; } = 100;
     public float maxHP { get; private set; } = 100;
     public bool reloading { get; private set; } = false;
@@ -24,6 +26,7 @@ public class PlayerController : MonoBehaviour
     public Vector3 grenadeThrowingVector => (this.fpsCamera.transform.forward + this.fpsCamera.transform.up) * this.grenadeThrowingForce;
     public GunController gunController { get; private set; }
     public LineRenderer line { get; private set; }
+    public AudioClip hurtSound;
 
 
     float totalRecoilUp = 0;
@@ -79,7 +82,10 @@ public class PlayerController : MonoBehaviour
 
     public void UpdateBulletOnScreen()
     {
-        CanvasController.Instance.bulletRemainText.text = $"{this.gunController.currentBulletsInMagazine}\\{this.gunController.currentTotalBullets}";
+        string text = this.useGun ?
+                        $"{this.gunController.currentBulletsInMagazine}\\{this.gunController.currentTotalBullets}"
+                        : this.grenadeRemains.ToString();
+        CanvasController.Instance.SetBulletRemainText(text);
     }
 
     public void ReceiveDamage(float damage)
@@ -103,6 +109,11 @@ public class PlayerController : MonoBehaviour
     public void PlayFireSound()
     {
         this.audioSource.PlayOneShot(this.gunController.fireSound);
+    }
+
+    public void PlayHurtSound()
+    {
+        this.audioSource.PlayOneShot(this.hurtSound);
     }
 
     public void AddBulletImpact(Vector3 pos)
@@ -192,14 +203,16 @@ public class PlayerController : MonoBehaviour
 
     bool OnGround()
     {
-        return Physics.Raycast(this.transform.position, Vector3.down, 0.750001f);
+        // return Physics.Raycast(this.transform.position, Vector3.down, 0.750001f);
+        return this.rigid.velocity.y == 0;
     }
 
     void Jump()
     {
+        // Debug.Log(this.rigid.velocity);
         if (Input.GetKey(KeyCode.Space) && OnGround())
         {
-            this.rigid.AddForce(Vector3.up * 200);
+            this.rigid.AddForce(Vector3.up * this.jumpForce);
         }
     }
 
@@ -222,10 +235,15 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             // use gun
+            Transform gun = this.gunWrapper.transform.GetChild(0);
+            GunController gunController = gun.GetComponent<GunController>();
+            string bulletRemainsText = gunController.currentBulletsInMagazine + "/" + gunController.currentTotalBullets;
+
             this.useGun = true;
             this.gunWrapper.SetActive(true);
             this.grenadeWrapper.SetActive(false);
             CanvasController.Instance.SetVisibleSight(true);
+            CanvasController.Instance.SetBulletRemainText(bulletRemainsText);
             PlayerShooter.Instance.HideGrenadeTrajectory();
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
@@ -235,6 +253,7 @@ public class PlayerController : MonoBehaviour
             this.gunWrapper.SetActive(false);
             this.grenadeWrapper.SetActive(true);
             CanvasController.Instance.SetVisibleSight(false);
+            CanvasController.Instance.SetBulletRemainText(this.grenadeRemains.ToString());
 
             CancelReload();
         }

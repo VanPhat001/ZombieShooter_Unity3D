@@ -2437,7 +2437,7 @@ MonoBehaviour:
   healthBar: {fileID: 7985124905067576618}
   goal: {fileID: 0}
   zombieScore: 25
-  zombieShootDamage: 18
+  zombieShootDamage: 7
   deathSound: {fileID: 8300000, guid: 1243fc574222b4eb69396e967f3bd017, type: 3}
   fireSound: {fileID: 8300000, guid: 5a198e3c1bd354c91b1d0463c351f6c3, type: 3}
 --- !u!82 &4206541686094503157
@@ -2452,7 +2452,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.54
   m_Pitch: 1
   Loop: 0
   Mute: 0
