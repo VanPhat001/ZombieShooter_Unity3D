@@ -4130,6 +4130,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: M26
       objectReference: {fileID: 0}
+    - target: {fileID: 3287831599348841134, guid: 53f8d65668d4f46d8a91623d34a6754b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8226204867762184948, guid: 53f8d65668d4f46d8a91623d34a6754b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -4144,7 +4148,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8226204867762184948, guid: 53f8d65668d4f46d8a91623d34a6754b, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8226204867762184948, guid: 53f8d65668d4f46d8a91623d34a6754b, type: 3}
       propertyPath: m_LocalRotation.x
@@ -4152,7 +4156,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8226204867762184948, guid: 53f8d65668d4f46d8a91623d34a6754b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8226204867762184948, guid: 53f8d65668d4f46d8a91623d34a6754b, type: 3}
       propertyPath: m_LocalRotation.z
@@ -4164,7 +4168,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8226204867762184948, guid: 53f8d65668d4f46d8a91623d34a6754b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8226204867762184948, guid: 53f8d65668d4f46d8a91623d34a6754b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -4673,7 +4677,7 @@ Transform:
   m_GameObject: {fileID: 1861821839}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 26.16, y: 0.76, z: 1.74}
+  m_LocalPosition: {x: 0.5, y: 0.76, z: -0.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4702,7 +4706,7 @@ MonoBehaviour:
   jumpForce: 110
   speed: 3.5
   speedUpRate: 1.8
-  grenadeThrowingForce: 220
+  grenadeThrowingForce: 400
   hurtSound: {fileID: 8300000, guid: 2bd1c25caa10d49638b7ee6380e0c588, type: 3}
 --- !u!114 &1861821844
 MonoBehaviour:

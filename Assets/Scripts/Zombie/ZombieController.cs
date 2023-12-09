@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
@@ -7,11 +8,12 @@ public class ZombieController : MonoBehaviour
     public Slider healthBar;
     public GameObject goal;
     public float zombieScore = 10f;
-    // public float zombieAttackDamage = 10f;
+    public float zombieAttackDamage = 10f;
     public float currentHP { get; private set; } = 100;
     public float maxHP { get; private set; } = 100;
     public bool isDead { get; private set; } = false;
     public AudioClip deathSound;
+    public Material superMaterial;
 
     NavMeshAgent agent;
     Animator animator;
@@ -24,6 +26,28 @@ public class ZombieController : MonoBehaviour
         this.audioSource = this.GetComponent<AudioSource>();
         UpdateHealthBar();
         SetWalkAction(true);
+    }
+
+    void ApplyMaterialForAllChildren(Transform parent)
+    {
+        if (parent.GetComponent<Renderer>() != null)
+        {
+            parent.GetComponent<Renderer>().material = this.superMaterial;
+        }
+
+        // Apply material to all children
+        foreach (Transform child in parent)
+        {
+            ApplyMaterialForAllChildren(child);
+        }
+    }
+
+    public void UpgradeToSuperState()
+    {
+        this.zombieScore *= 2;
+        this.zombieAttackDamage *= 1.6f;
+        this.GetComponent<NavMeshAgent>().speed *= 2.4f; // don't use this.agent at here, because this.agent has no value
+        ApplyMaterialForAllChildren(this.transform);
     }
 
     public void ReceiveDamage(float damage)

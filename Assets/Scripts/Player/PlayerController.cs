@@ -62,7 +62,7 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
-        this.currentHP = 10f;
+        // this.currentHP = 10f;
         Instance = this;
 
         GameController.Instance.Continue();

@@ -209,6 +209,6 @@ public class CyberZombieController : MonoBehaviour
             this.agent.speed = 0;
         }
 
-        Debug.Log(this.agent.speed);
+        // Debug.Log(this.agent.speed);
     }
 }

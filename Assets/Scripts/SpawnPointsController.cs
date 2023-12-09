@@ -26,16 +26,24 @@ public class SpawnPointsController : MonoBehaviour
         return Random.Range(0, this.spawnPoints.Length);
     }
 
-    void MakeZombie(int idx)
+    GameObject MakeZombie(int idx, bool isMutation)
     {
         var newZombie = Instantiate(this.zombie, this.spawnPoints[idx].transform.position, Quaternion.identity);
-        newZombie.GetComponent<ZombieController>().goal = PlayerController.Instance.gameObject;
+        var zombieControler = newZombie.GetComponent<ZombieController>();
+        zombieControler.goal = PlayerController.Instance.gameObject;
+
+        if (isMutation)
+        {
+            zombieControler.UpgradeToSuperState();
+        }
+        return newZombie;
     }
 
-    void MakeCyberZombie(int idx)
+    GameObject MakeCyberZombie(int idx)
     {
         var newZombie = Instantiate(this.cyberZombie, this.spawnPoints[idx].transform.position, Quaternion.identity);
         newZombie.GetComponent<CyberZombieController>().goal = PlayerController.Instance.gameObject;
+        return newZombie;
     }
 
     private void Update()
@@ -50,11 +58,12 @@ public class SpawnPointsController : MonoBehaviour
 
             if (randValue <= 7)
             {
-                MakeZombie(idx);
+                bool isMutation = Random.Range(0, 40) <= 3;
+                MakeZombie(idx, isMutation);
             }
             else
             {
-                // MakeCyberZombie(idx);
+                MakeCyberZombie(idx);
             }
         }
     }

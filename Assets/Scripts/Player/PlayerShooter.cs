@@ -83,6 +83,7 @@ public class PlayerShooter : MonoBehaviour
         GameObject cam = PlayerController.Instance.fpsCamera;
         Transform grenade = PlayerController.Instance.grenadeWrapper.transform.GetChild(0);
         GameObject newGrenade = Instantiate(grenade.gameObject, grenade.position, grenade.rotation);
+        newGrenade.transform.Translate(newGrenade.transform.forward * 0.01f);
         Rigidbody rigid = newGrenade.GetComponent<Rigidbody>();
 
         rigid.isKinematic = false;
