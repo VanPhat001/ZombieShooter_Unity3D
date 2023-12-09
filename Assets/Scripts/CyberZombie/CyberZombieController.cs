@@ -145,6 +145,16 @@ public class CyberZombieController : MonoBehaviour
         }
     }
 
+     void LookObject(Transform source, Transform target)
+    {
+        Vector3 dir = target.position - source.position;
+        Quaternion lookRot = Quaternion.LookRotation(dir);
+        lookRot.x = 0; 
+        lookRot.z = 0;
+        // source.rotation = Quaternion.Slerp(source.rotation, lookRot, Mathf.Clamp01(3.0f * Time.maximumDeltaTime));
+        this.transform.rotation = Quaternion.Slerp(source.rotation, lookRot, Mathf.Clamp01(3f * Time.maximumDeltaTime));
+    }
+
     private void Update()
     {
         if (this.isDead)
@@ -155,7 +165,6 @@ public class CyberZombieController : MonoBehaviour
         if (this.currentHP <= 0)
         {
             this.isDead = true;
-            this.agent.speed = 0;
             Destroy(this.GetComponent<CapsuleCollider>());
 
             SetSpeedAction(-Time.deltaTime);
@@ -163,6 +172,7 @@ public class CyberZombieController : MonoBehaviour
             SetAttackAction(false);
             SetDeathAction(true);
 
+            this.agent.speed = 0;
             this.audioSource.PlayOneShot(this.deathSound);
 
             Destroy(this.gameObject, 3f);
@@ -181,20 +191,24 @@ public class CyberZombieController : MonoBehaviour
         }
         else if (distance > 1.8)
         {
-            this.agent.speed = 0;
             SetSpeedAction(-Time.deltaTime);
             if (!this.shooting)
             {
                 SetShootAction(true);
             }
             SetAttackAction(false);
+            this.agent.speed = 0;
+
+            LookObject(this.headGun.transform, PlayerController.Instance.fpsCamera.transform);
         }
         else
         {
-            this.agent.speed = 0;
             SetSpeedAction(-Time.deltaTime);
             SetShootAction(false);
             SetAttackAction(true);
+            this.agent.speed = 0;
         }
+
+        Debug.Log(this.agent.speed);
     }
 }

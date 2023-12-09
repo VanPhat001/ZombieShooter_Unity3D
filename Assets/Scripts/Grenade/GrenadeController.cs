@@ -39,6 +39,15 @@ public class GrenadeController : MonoBehaviour
                     CanvasController.Instance.AddScore(zombie.zombieScore);
                 }
             }
+            else if (collider.tag.Equals("ZombieCyber"))
+            {
+                CyberZombieController zombie = collider.GetComponent<CyberZombieController>();
+                zombie.ReceiveDamage(grenadeDamage);
+                if (zombie.currentHP <= 0)
+                {
+                    CanvasController.Instance.AddScore(zombie.zombieScore);
+                }
+            }
         }
 
         Destroy(this.gameObject, 1.2f);

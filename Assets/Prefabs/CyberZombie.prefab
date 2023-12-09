@@ -2357,7 +2357,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2823750113444266189}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 20
   m_Drag: 0
   m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -2437,7 +2437,6 @@ MonoBehaviour:
   healthBar: {fileID: 7985124905067576618}
   goal: {fileID: 0}
   zombieScore: 25
-  zombieAttackDamage: 14
   zombieShootDamage: 18
   deathSound: {fileID: 8300000, guid: 1243fc574222b4eb69396e967f3bd017, type: 3}
   fireSound: {fileID: 8300000, guid: 5a198e3c1bd354c91b1d0463c351f6c3, type: 3}
