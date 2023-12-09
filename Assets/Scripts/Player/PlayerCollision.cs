@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerCollision : MonoBehaviour
@@ -35,8 +32,14 @@ public class PlayerCollision : MonoBehaviour
         }
         else if (tag.Equals("HealthPack"))
         {
+            HealthPackController healthPackController = other.gameObject.GetComponent<HealthPackController>();
+            if (!healthPackController.Active) {
+                return;
+            }
+
             PlayerController.Instance.HealPercent(0.3f);
-            Destroy( other.gameObject);
+            healthPackController.SetAvailableAfter(10);
+            // Destroy(other.gameObject);
         }
     }
 

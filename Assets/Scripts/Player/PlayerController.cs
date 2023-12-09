@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using UnityEngine;
 
@@ -13,7 +12,7 @@ public class PlayerController : MonoBehaviour
     public GameObject bulletImpact;
 
     public int grenadeRemains = 5;
-    public float jumpForce = 200f;
+    public float jumpForce = 100f;
     public float currentHP { get; private set; } = 100;
     public float maxHP { get; private set; } = 100;
     public bool reloading { get; private set; } = false;
@@ -22,7 +21,7 @@ public class PlayerController : MonoBehaviour
     public bool isDead { get; private set; } = false;
     public float speedUpRate = 1.8f;
     public bool useGun { get; private set; } = true;
-    public float grenadeThrowingForce = 220f;
+    public float grenadeThrowingForce = 280f;
     public Vector3 grenadeThrowingVector => (this.fpsCamera.transform.forward + this.fpsCamera.transform.up) * this.grenadeThrowingForce;
     public GunController gunController { get; private set; }
     public LineRenderer line { get; private set; }
@@ -63,12 +62,13 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        this.currentHP = 10f;
         Instance = this;
 
         GameController.Instance.Continue();
         Cursor.lockState = CursorLockMode.Locked;
         CanvasController.Instance.UpdateBestScoreText();
-        CanvasController.Instance.SetHealth(1);
+        CanvasController.Instance.SetHealth(this.currentHP / this.maxHP);
 
         this.rigid = this.GetComponent<Rigidbody>();
         this.audioSource = this.GetComponent<AudioSource>();

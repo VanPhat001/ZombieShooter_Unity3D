@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -24,6 +22,7 @@ public class GameController : MonoBehaviour
 
     public void Restart()
     {
+        this.UpdateBestScore(CanvasController.Instance.score);
         SceneManager.LoadScene(0);
     }
 
@@ -46,6 +45,7 @@ public class GameController : MonoBehaviour
 
     public void Quit()
     {
+        this.UpdateBestScore(CanvasController.Instance.score);
         #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
         #endif
