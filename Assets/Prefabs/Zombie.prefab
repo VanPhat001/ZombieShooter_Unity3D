@@ -354,7 +354,7 @@ MonoBehaviour:
   healthBar: {fileID: 7397560497738794491}
   goal: {fileID: 0}
   zombieScore: 10
-  zombieAttackDamage: 10
+  zombieAttackDamage: 4
   deathSound: {fileID: 8300000, guid: ee47639ad3a2044149ec4428091a6d91, type: 3}
   superMaterial: {fileID: 2100000, guid: 0c24ff3f078566f4d9d83ee8bd6a3f72, type: 2}
 --- !u!54 &8806399370466098691

@@ -6,13 +6,33 @@ public class PlayerCollision : MonoBehaviour
     //     Debug.Log(other.transform.tag);
     // }
 
+    Transform FindGameObject(Transform tf, string tag)
+    {
+        if (tf == null)
+        {
+            return null;
+        }
+        if (tf.tag == tag)
+        {
+            return tf;
+        }
+        return FindGameObject(tf.parent, tag);
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         string tag = other.tag;
         if (tag.Equals("ZombieRightHand"))
         {
-            // ZombieController zombie = other.GetComponent<ZombieController>();
-            PlayerController.Instance.ReceiveDamage(4);
+            var zombie = FindGameObject(other.transform, "Zombie");
+            float attackDamage = 4f;
+            if (zombie != null)
+            {
+                ZombieController zombieController = zombie.GetComponent<ZombieController>();
+                attackDamage = zombieController.zombieAttackDamage;
+            }
+
+            PlayerController.Instance.ReceiveDamage(attackDamage);
             PlayerController.Instance.PlayHurtSound();
         }
         else if (tag.Equals("ZombieCyberSword"))
@@ -33,7 +53,8 @@ public class PlayerCollision : MonoBehaviour
         else if (tag.Equals("HealthPack"))
         {
             HealthPackController healthPackController = other.gameObject.GetComponent<HealthPackController>();
-            if (!healthPackController.Active) {
+            if (!healthPackController.Active)
+            {
                 return;
             }
 

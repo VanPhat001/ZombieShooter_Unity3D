@@ -8,7 +8,7 @@ public class ZombieController : MonoBehaviour
     public Slider healthBar;
     public GameObject goal;
     public float zombieScore = 10f;
-    public float zombieAttackDamage = 10f;
+    public float zombieAttackDamage = 4f;
     public float currentHP { get; private set; } = 100;
     public float maxHP { get; private set; } = 100;
     public bool isDead { get; private set; } = false;
@@ -28,17 +28,16 @@ public class ZombieController : MonoBehaviour
         SetWalkAction(true);
     }
 
-    void ApplyMaterialForAllChildren(Transform parent)
+    void ApplyMaterialToAllChildren(Transform parent)
     {
         if (parent.GetComponent<Renderer>() != null)
         {
             parent.GetComponent<Renderer>().material = this.superMaterial;
         }
 
-        // Apply material to all children
         foreach (Transform child in parent)
         {
-            ApplyMaterialForAllChildren(child);
+            ApplyMaterialToAllChildren(child);
         }
     }
 
@@ -47,7 +46,7 @@ public class ZombieController : MonoBehaviour
         this.zombieScore *= 2;
         this.zombieAttackDamage *= 1.6f;
         this.GetComponent<NavMeshAgent>().speed *= 2.4f; // don't use this.agent at here, because this.agent has no value
-        ApplyMaterialForAllChildren(this.transform);
+        ApplyMaterialToAllChildren(this.transform);
     }
 
     public void ReceiveDamage(float damage)
